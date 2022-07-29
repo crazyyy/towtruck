@@ -73,7 +73,7 @@ const extReplace = require("gulp-ext-replace");
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminAdvpng = require('imagemin-advpng');
-const imageminGuetzli = require('imagemin-guetzli');
+// const imageminGuetzli = require('imagemin-guetzli');
 
 const plugins = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
