@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.local",
-  "theme": "wp-framework",
+  "domain": "towtruck.local",
+  "theme": "wp-towtruck",
   "path": {
     "base": {
       "src":"assets/",

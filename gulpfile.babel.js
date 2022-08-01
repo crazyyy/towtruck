@@ -1,51 +1,33 @@
 'use strict';
-/* if work with html set TRUE, else - FALSE */
-const htmlOWp = false;
-let env_prod = true;
+/* Set htmlOrWp to TRUE if work with html, else - FALSE */
+const htmlOWp = true;
 
-// TODO: retina display mixnis transfer from mixin
+/* Set environmentProd to TRUE if build for Production, or FALSE if this is development build*/
+const environmentProd = true;
 
-if (env_prod === true) {
-  console.log('\x1b[32m', process.env.NODE_ENV);
-  console.log('\x1b[32m', '---------PRODUCTION ---------');
-  console.log('\x1b[36m', '---------Sourcemaps DISABLED!---------');
-} else {
-  console.log('\x1b[31m', process.env.NODE_ENV);
-  console.log('\x1b[31m', '---------DEV----------');
-  console.log('\x1b[31m', '---------Sourcemaps ENABLED!---------');
-}
+/* Import Base dependencies */
+const config = require('config');
+const gulp = require('gulp');
+const lazypipe = require('lazypipe');
 
-if (htmlOWp === false) {
-  config.path.base.wp = './wp-content/themes/' + config.theme + '/';
-  // config.path.base.wp = './html/'; /* only for php files located in html */
-  ChangeBasePath(config);
-  config.path.base.dest = config.path.base.wp;
-}
-
-/* browserSync config */
-let args;
+/* Import and config BrowserSync */
+const browserSync = require('browser-sync').create();
+let  args = {
+  notify: false,
+  port: 9090
+};
 if (htmlOWp === true) {
   args = {
-    notify: false,
-    port: 9080,
     server: {
       baseDir: config.path.base.dest,
     }
-  }
+  };
 } else {
   args = {
-    notify: false,
-    port: 9090,
     proxy: config.domain,
     host: config.domain
-  }
+  };
 }
-
-/* import dependencies */
-import config from 'config';
-import gulp from 'gulp';
-import browserSync from 'browser-sync';
-import lazypipe from 'lazypipe';
 
 // /* PostCSS plugins */
 // import postcssPresetEnv from 'postcss-preset-env';
@@ -62,23 +44,42 @@ import lazypipe from 'lazypipe';
 // // import webpcss from 'webpcss';
 
 
-import replace from 'gulp-replace';
+const replace = require('gulp-replace');
 
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
+const dartSass = require('sass');
+const gulpSass = require('gulp-sass');
 const sass = gulpSass( dartSass );
 
 const extReplace = require("gulp-ext-replace");
 // const imageminWebp = require("imagemin-webp");
-const imageminPngquant = require('imagemin-pngquant');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminAdvpng = require('imagemin-advpng');
+// const imageminPngquant = require('imagemin-pngquant');
+// const imageminMozjpeg = require('imagemin-mozjpeg');
+// const imageminAdvpng = require('imagemin-advpng');
 // const imageminGuetzli = require('imagemin-guetzli');
 
 const plugins = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
   replaceString: /\bgulp[\-.]/
 });
+
+if (environmentProd === true) {
+  console.log('\x1b[32m', process.env.NODE_ENV);
+  console.log('\x1b[32m', '---------PRODUCTION ---------');
+  console.log('\x1b[36m', '---------Sourcemaps DISABLED!---------');
+} else {
+  console.log('\x1b[31m', process.env.NODE_ENV);
+  console.log('\x1b[31m', '---------DEV----------');
+  console.log('\x1b[31m', '---------Sourcemaps ENABLED!---------');
+}
+
+if (htmlOWp === false) {
+  config.path.base.wp = './wp-content/themes/' + config.theme + '/';
+  // config.path.base.wp = './html/'; /* only for php files located in html */
+  ChangeBasePath(config);
+  config.path.base.dest = config.path.base.wp;
+}
+
+
 
 // let processors = [
 //   charset(),
@@ -126,14 +127,14 @@ gulp.task('styles', function() {
   return gulp.src(source)
     .pipe(customPlumber('Error Running Sass'))
     .pipe(plugins.newer(destination))
-    .pipe(plugins.if(!env_prod, plugins.sourcemaps.init()))
+    .pipe(plugins.if(!environmentProd, plugins.sourcemaps.init()))
     .pipe(sass({
       // outputStyle: 'compact',
       precision: 5,
       onError: console.error.bind(console, 'Sass error:')
     }))
     // .pipe(plugins.postcss(processors))
-    .pipe(plugins.if(!env_prod, plugins.sourcemaps.write('maps', {includeContent: true})))
+    .pipe(plugins.if(!environmentProd, plugins.sourcemaps.write('maps', {includeContent: true})))
     .pipe(gulp.dest(destination))
     .pipe(plugins.filter('**/*.css'))
     .pipe(plugins.size({
@@ -264,8 +265,8 @@ gulp.task('fonts', function() {
 });
 
 
-var jsConcat = lazypipe()
-  .pipe(plugins.concat, 'scripts.js', {newLine: '\n;'})
+const jsConcat = lazypipe()
+  .pipe(plugins.concat, 'scripts.js', {newLine: '\n;'});
 
 // Optimize script
 gulp.task('scripts', function() {
@@ -273,13 +274,13 @@ gulp.task('scripts', function() {
     .pipe(customPlumber('Error Running Scripts'))
     .pipe(plugins.newer(config.path.scripts.dest))
     .pipe(customPlumber('Error Compiling Scripts'))
-    .pipe(plugins.if(!env_prod, plugins.sourcemaps.init()))
+    .pipe(plugins.if(!environmentProd, plugins.sourcemaps.init()))
     .pipe(plugins.babel({
 			presets: ['env']
 		}))
     .pipe(plugins.if(['scripts.js' /*,'scripts2.js'*/], jsConcat()))
     .pipe(plugins.if('*.js', plugins.uglify()))
-    .pipe(plugins.if(!env_prod, plugins.sourcemaps.write('maps', {includeContent: true})))
+    .pipe(plugins.if(!environmentProd, plugins.sourcemaps.write('maps', {includeContent: true})))
     .pipe(gulp.dest(config.path.scripts.dest))
     .pipe(plugins.filter('**/*.js'))
     .pipe(plugins.size({
@@ -305,7 +306,7 @@ gulp.task('build', gulp.parallel(
   'task:images-styles',
   // 'image:image2webpContent', // tempolary disable it
   'scripts',
-  'fonts',
+  'fonts'
 ));
 
 
@@ -350,3 +351,7 @@ function ChangeBasePath(config) {
   config.path.scripts.dest = config.path.scripts.dest.replace(config.path.base.dest, config.path.base.wp);
   config.path.base.desthtml = config.path.base.desthtml.replace(config.path.base.dest, config.path.base.wp);
 }
+
+
+
+// TODO: retina display mixnis transfer from mixin
