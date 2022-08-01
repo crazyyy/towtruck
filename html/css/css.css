@@ -5701,7 +5701,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .magnific-popup .magnific-popup__title {
@@ -6132,7 +6132,7 @@ img {
 }
 .region-header-top:before {
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .region-header-top:after {
@@ -6265,7 +6265,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .block-main-slider .field--name-field-paragraph-image {
@@ -6427,7 +6427,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .block-procedure .block__content {
@@ -6688,7 +6688,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .block-help .block__layout {
@@ -6969,7 +6969,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 .block-instagram-block .block__layout {
@@ -7113,7 +7113,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: url("/themes/personal/images/bg-line.jpeg");
+  background: url("../img/bg-line.jpeg");
   opacity: 0.02;
 }
 
@@ -7324,7 +7324,7 @@ img {
   }
   .region-header-bottom:before {
     z-index: -1;
-    background: url("/themes/personal/images/bg-line.jpeg");
+    background: url("../img/bg-line.jpeg");
     opacity: 0.02;
   }
   .region-header-bottom:after {
@@ -7431,7 +7431,7 @@ img {
     bottom: 0;
     left: 0;
     z-index: -1;
-    background: url("/themes/personal/images/bg-line.jpeg");
+    background: url("../img/bg-line.jpeg");
     opacity: 0.02;
   }
 }
@@ -7454,7 +7454,7 @@ img {
   }
   .site-header:before {
     z-index: -1;
-    background: url("/themes/personal/images/bg-line.jpeg");
+    background: url("../img/bg-line.jpeg");
     opacity: 0.02;
   }
   .site-header:after {
