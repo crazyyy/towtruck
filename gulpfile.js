@@ -49,69 +49,10 @@ if ( htmlDevelopment ) {
 const sass = require( 'gulp-sass' )( require( 'sass' ) );
 const autoprefixer = require( 'autoprefixer' );
 
-// /* PostCSS plugins */
-// import postcssPresetEnv from 'postcss-preset-env';
-// import cssnano from 'cssnano';
-// import easysprite from 'postcss-easysprites';
-// import urlrev from 'postcss-urlrev';
-// import discardDuplicates from 'postcss-discard-duplicates';
-// import discardEmpty from 'postcss-discard-empty';
-// import combineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
-// import charset from 'postcss-single-charset';
-// import willChangeTransition from 'postcss-will-change-transition';
-// import willChange from 'postcss-will-change';
-// import momentumScrolling from 'postcss-momentum-scrolling';
-// // import webpcss from 'webpcss';
-
-/* Config stylesheets build*/
-// let processors = [
-//   charset(),
-//   willChangeTransition(),
-//   willChange(),
-//   momentumScrolling([
-//     'scroll'
-//   ]),
-//   discardDuplicates(),
-//   discardEmpty(),
-//   combineDuplicatedSelectors({
-//     removeDuplicatedProperties: true
-//   }),
-//   easysprite({
-//     imagePath:'./assets/img/sprites',
-//     spritePath: './assets/img/sprites'
-//   }),
-//   // webpcss({
-//   //   copyBackgroundSize: true
-//   // }),
-//   // https://github.com/hail2u/node-css-mqpacker#options
-//   // mqpacker({
-//   //   sort: function (a, b) {
-//   //     return a.localeCompare(b);
-//   //   }
-//   // }),
-//   urlrev(),
-//   postcssPresetEnv({
-//     stage: 4,
-//     warnForDuplicates: false
-//   }),
-//   cssnano({
-//     preset: 'advanced',
-//     reduceIdents: true,
-//     zindex: false
-//   })
-// ];
-
 /* Images Dependencies */
 // do not update gulp-imagemin
 // gulp-imagemin should be "7.1.0"
 const imagemin = require( 'gulp-imagemin' );
-// import imagemin from 'gulp-imagemin';
-// const imageminWebp = require("imagemin-webp");
-// const imageminMozjpeg = require('imagemin-mozjpeg');
-// const imageminAdvpng = require('imagemin-advpng');
-// const imageminGuetzli = require('imagemin-guetzli');
-// const imageminRecompress = require( 'imagemin-jpeg-recompress' );
-// const imageminPngquant = require( 'imagemin-pngquant' );
 
 /* JS Dependencies */
 
@@ -230,6 +171,7 @@ const spriteSvgConfig = {
 /* Make sprite from images */
 gulp.task( 'image:spriteSVG', () => gulp
   .src( `${config.path.images.src}sprites/**/*.svg` )
+  .pipe( customErrorPlumber( 'Error Running spriteSVG' ) )
   .pipe( plugin.svgmin() )
   .pipe( plugin.svgSprite( spriteSvgConfig ) )
   .pipe( gulp.dest( config.path.base.src ) )
@@ -249,18 +191,6 @@ gulp.task( 'image:image2webp', () => {
     } ) )
     .pipe( plugin.webp() )
     .pipe( gulp.dest( config.path.images.dest ) );
-} );
-
-gulp.task( 'image:image2webpContent', () => {
-  // return gulp.src(config.path.images.srcImgContent + '**/*.{png,jpg,jpeg}')
-  //   // .pipe(plugin.newer(config.path.images.dest))
-  //   .pipe(plugin.imagemin([
-  //     imageminWebp({
-  //       quality: 95
-  //     })
-  //   ]))
-  //   .pipe(extReplace(".webp"))
-  //   .pipe(gulp.dest(config.path.images.srcImgContent));
 } );
 
 /* Copy fonts from assets folder to destination */
@@ -331,14 +261,12 @@ gulp.task( 'parallel-scripts-images-styles',
 
 gulp.task( 'default', gulp.parallel(
   'task:images-styles',
-  // 'image:image2webpContent', // tempolary disable it
   'scripts',
   'fonts'
 ) );
 
 gulp.task( 'build', gulp.parallel(
   'task:images-styles',
-  // 'image:image2webpContent', // tempolary disable it
   'scripts',
   'fonts'
 ) );
@@ -398,10 +326,6 @@ function ChangeBasePath ( config ) {
     config.path.base.dest, config.path.base.wp
   );
 }
-
-
-// TODO: retina display mixnis transfer from mixin
-
 
 // https://www.npmjs.com/package/gulp-sourcemaps
 // https://www.npmjs.com/package/gulp-changed
