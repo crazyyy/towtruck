@@ -10,9 +10,9 @@ const WP_CACHE = false;
 //define('DB_NAME', 'DBNAME');
 //define('DB_USER', 'DBUSER');
 //define('DB_PASSWORD', 'DBPASS');
-const DB_NAME       = 'wpframework';
-const DB_USER       = 'wpframework';
-const DB_PASSWORD   = 'wpframework';
+const DB_NAME       = 'towtruck';
+const DB_USER       = 'towtruck';
+const DB_PASSWORD   = 'towtruck';
 const DB_HOST       = 'localhost';
 
 const WP_MEMORY_LIMIT = '512M';

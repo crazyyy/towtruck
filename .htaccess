@@ -348,30 +348,21 @@ Options -Indexes
 	RewriteRule .* http://127.0.0.1 [L]
 </IfModule>
 #AIOWPS_BLOCK_SPAMBOTS_END
-#AIOWPS_PREVENT_IMAGE_HOTLINKS_START
-<IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteCond %{HTTP_REFERER} !^$
-	RewriteCond %{REQUEST_FILENAME} -f
-	RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g?|png)$ [NC]
-	RewriteCond %{HTTP_REFERER} !^http(s)?://wp-framework\.local [NC]
-	RewriteRule \.(gif|jpe?g?|png)$ - [F,NC,L]
-</IfModule>
-#AIOWPS_PREVENT_IMAGE_HOTLINKS_END
+
 # END All In One WP Security
 
 # BEGIN WordPress
-# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
-# созданы автоматически и подлежат изменению только через фильтры WordPress.
-# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+# Директиви (рядки) між `BEGIN WordPress` і `END WordPress`
+# створені автоматично і підлягають змінам тільки через фільтри WordPress.
+# Зміни зроблені вручну між цими маркерами будуть перезаписані.
 <IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-	RewriteBase /
-	RewriteRule ^index\.php$ - [L]
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . /index.php [L]
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
