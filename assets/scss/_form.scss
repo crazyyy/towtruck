@@ -1,14 +1,47 @@
-/* Form CSS */
 div.contactus-form {
-  max-width: 370px;
-  padding: 0px;
   box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
+  max-width: 370px;
+  padding: 0;
+}
+
+input {
+  &[type=date].contactus-fields, &[type=email].contactus-fields, &[type=tel].contactus-fields, &[type=text].contactus-fields {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-sizing: border-box !important;
+    color: #555;
+    display: table-cell;
+    font-size: 13px;
+    height: 40px;
+    line-height: 18px;
+    margin: 0;
+    padding: 4px 6px;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+textarea.contactus-textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-sizing: border-box !important;
+  color: #555;
+  display: table-cell;
+  font-size: 13px;
+  height: 110px;
+  line-height: 18px;
+  margin: 0;
+  padding: 4px 6px;
+  vertical-align: middle;
+  width: 100%;
 }
 
 form.reg_form {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 div.contactus-form div.joomly-contactus-div {
@@ -20,101 +53,43 @@ div.contactus-form div.joomly-contactus-div {
 }
 
 .contactus-center {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .contactus-right {
-  margin-right: 0;
   margin-left: auto;
+  margin-right: 0;
 }
 
 .g-recaptcha {
   display: table;
 }
 
-/* CSS Buttons */
-
 div.contactus-form button.contactus-button {
-  padding: 14px 18px;
-  border: 0 none;
-  font-weight: 700;
-  letter-spacing: 1px;
-  display: block;
-  text-transform: uppercase;
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  color: #ffffff;
-  box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  cursor: pointer;
-  text-shadow: none;
   background-image: none;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box !important;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 1px;
+  max-width: 100%;
+  padding: 14px 18px;
+  text-shadow: none;
+  text-transform: uppercase;
+  width: auto;
 
   &:hover {
-    opacity: 0.8;
-    outline: 0 none;
+    opacity: .8;
+    outline: 0;
   }
 }
 
-/* CSS Fields */
-
-input {
-  &[type="text"].contactus-fields, &[type="email"].contactus-fields, &[type="date"].contactus-fields, &[type="tel"].contactus-fields {
-    border: 1px solid #ccc;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    vertical-align: middle;
-    color: #555;
-    background-color: #fff;
-    height: 40px;
-    width: 100%;
-    padding: 4px 6px;
-    box-sizing: border-box !important;
-    -webkit-box-sizing: border-box !important;
-    -moz-box-sizing: border-box !important;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 0px;
-    display: table-cell;
-  }
-}
-
-textarea.contactus-textarea {
-  border: 1px solid #ccc;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  vertical-align: middle;
-  color: #555;
-  background-color: #fff;
-  height: 40px;
-  width: 100%;
-  padding: 4px 6px;
-  box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 0px;
-  display: table-cell;
-  padding: 4px 6px;
-  height: 110px;
-}
-
-input[type="text"].contactus-fields.contactus-captcha {
+input[type=text].contactus-fields.contactus-captcha {
   display: inline-block;
   width: 66.5%;
 }
@@ -122,77 +97,62 @@ input[type="text"].contactus-fields.contactus-captcha {
 div {
   &.contactus-form {
     img.img-contactus-lightbox {
-      min-width: 80px;
-      width: 30%;
-      margin-right: 3%;
       display: inline-block;
+      margin-right: 3%;
+      min-width: 80px;
       vertical-align: bottom;
+      width: 30%;
     }
 
     div.contactus-file {
-      width: 100%;
-      max-width: 450px;
       box-sizing: border-box !important;
-      -webkit-box-sizing: border-box !important;
-      -moz-box-sizing: border-box !important;
       font-size: 0;
       margin-bottom: 15px;
+      max-width: 450px;
+      width: 100%;
+    }
+
+    label {
+      &.contactus-file, &.contactus-file-label {
+        box-sizing: border-box !important;
+        display: inline-block;
+        font-size: 13px;
+        line-height: 40px;
+        margin: 0;
+      }
     }
 
     span.contactus-file {
-      overflow: hidden;
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-      border-radius: 0px;
-      padding: 0px;
       border: 1px solid #ccc;
+      border-radius: 0;
+      box-sizing: border-box !important;
       display: inline-block;
       height: 40px;
+      overflow: hidden;
+      padding: 0;
       width: 100%;
-      box-sizing: border-box !important;
-      -webkit-box-sizing: border-box !important;
-      -moz-box-sizing: border-box !important;
     }
 
     label {
       &.contactus-file {
-        font-size: 13px;
-        line-height: 40px;
-        display: inline-block;
-        width: 20%;
-        height: 100%;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: #fff;
         float: right;
-        margin: 0px;
-        padding: 0px;
+        height: 100%;
+        padding: 0;
         text-align: center;
-        color: white;
-        box-sizing: border-box !important;
-        -webkit-box-sizing: border-box !important;
-        -moz-box-sizing: border-box !important;
-        -webkit-border-top-right-radius: 0px;
-        -webkit-border-bottom-right-radius: 0px;
-        -moz-border-top-right-radius: 0px;
-        -moz-border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        width: 20%;
       }
 
       &.contactus-file-label {
         color: #999;
-        line-height: 40px;
-        font-size: 13px;
-        margin: 0px;
-        padding: 0px 0px 0px 10px;
+        font-weight: 400;
         height: 100%;
-        width: 70%;
-        display: inline-block;
-        vertical-align: middle;
         overflow: hidden;
-        text-overflow: ellipsis;
-        box-sizing: border-box !important;
-        -webkit-box-sizing: border-box !important;
-        -moz-box-sizing: border-box !important;
-        font-weight: normal;
+        padding: 0 0 0 10px;
+        vertical-align: middle;
+        width: 70%;
 
         &.contactus-added {
           color: #555;
@@ -203,45 +163,38 @@ div {
     input.contactus-file {
       display: none;
       height: 40px;
-      width: 0px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
+      width: 0;
     }
   }
 
   &.contactus-alert {
-    display: none;
-    position: absolute;
-    background: white;
-    z-index: 1000000;
-    padding: 0px;
-    top: -400px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    background: #fff;
+    border-radius: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    display: none;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    z-index: 1000000;
   }
 }
 
-/* CSS Uploader */
-
-/* CSS Alerts */
-
 .dimmer {
-  z-index: 999995;
+  background: center center no-repeat #000;
+  height: 100%;
+  left: 0;
+  opacity: .5;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  background: black no-repeat scroll center center;
-  opacity: 0.5;
+  z-index: 999995;
 }
 
 div {
   &.contactus-lightbox-caption {
-    border-bottom: 1px solid #E0D8D8;
+    border-bottom: 1px solid #e0d8d8;
+    color: #fff;
 
     > div {
       display: inline-block;
@@ -249,8 +202,8 @@ div {
   }
 
   &.contactus-lightbox-body {
-    padding: 20px 15px 10px 15px;
     background-color: #fff;
+    padding: 20px 15px 10px;
   }
 
   &.contactus-alert-body {
@@ -261,48 +214,44 @@ div {
     margin-left: 10%;
     width: 80%;
   }
-
-  &.contactus-lightbox-caption {
-    color: white;
-  }
 }
 
 p.contactus-lightbox-text-center {
+  margin: 0;
   text-align: center;
-  margin: 0px;
 }
 
 div {
   &.contactus-lightbox-cap > h4 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    color: #fff;
     font-size: 14px;
     line-height: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
-    color: white;
   }
 
   &.contactus-alert > p {
-    margin: 20px 0px 30px 0px;
-    text-align: center;
     font-size: 16px;
+    margin: 20px 0 30px;
+    text-align: center;
   }
 
   &.contactus-lightbox-closer {
     width: 10%;
 
     > i {
-      float: right;
+      color: #fff;
       cursor: pointer;
+      float: right;
       margin-right: 10px;
-      color: white;
     }
   }
 
-  &.date-container {
+  &.date-container, &.select-container {
     display: table;
-    width: 100%;
     text-align: left;
+    width: 100%;
   }
 
   &.checkbox-container {
@@ -310,66 +259,48 @@ div {
   }
 }
 
-label.contactus-date-label {
-  display: table-cell;
-  font-weight: normal;
-  margin: 0px 0px;
-  width: 120px;
+label {
+  &.contactus-date-label, &.contactus-select-label {
+    display: table-cell;
+    font-weight: 400;
+    margin: 0;
+    width: 120px;
+  }
 }
 
-input[type="date"].contactus-fields.constructor {
+input[type=date].contactus-fields.constructor {
   padding: 10px 6px;
 }
 
 span.contactus-sp {
-  font-weight: normal;
-  margin: 0px 0px;
-  padding: 0px 0px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
-input[type="checkbox"].contactus-fields {
-  margin: 0px 0px 0px 10px;
+input[type=checkbox].contactus-fields {
+  margin: 0 0 0 10px;
 }
 
 label.contactus-checkbox-label {
-  width: 100%;
-  margin: 0px 0px;
-  font-weight: normal;
+  font-weight: 400;
+  margin: 0;
   text-align: center;
-}
-
-div.select-container {
-  display: table;
   width: 100%;
-  text-align: left;
-}
-
-label.contactus-select-label {
-  display: table-cell;
-  font-weight: normal;
-  margin: 0px 0px;
-  width: 120px;
 }
 
 select.contactus-select {
-  display: table-cell;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  color: #555;
   background-color: #fff;
-  width: 100%;
-  height: 40px;
-  margin: 0px 0px;
-  padding: 6px 4px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
+  color: #555;
+  display: table-cell;
+  height: 40px;
+  margin: 0;
+  padding: 6px 4px;
+  width: 100%;
 }
 
 p.joomly-p {

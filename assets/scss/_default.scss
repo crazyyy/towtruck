@@ -1,100 +1,52 @@
-body {
-  background-color: #fff;
-  color: #252525;
-}
-
 .sp-preloader {
   background-color: #fff;
   color: #252525;
+}
 
-  > div {
-    background: #f2e746;
+body {
+  background-color: #fff;
+  color: #252525;
+  font-family: 'Roboto Slab',sans-serif;
+}
 
-    &:after {
-      background: #fff;
-    }
+#offcanvas-toggler > .fa {
+  &:active, &:focus, &:hover {
+    color: #f2e746;
   }
 }
 
-#sp-top-bar {
-  background: #0a0a0a;
-  color: #fff;
-
-  a {
-    color: #fff;
-  }
-}
-
-#sp-header {
-  background: #fff;
-}
-
-a {
+.coming-soon-number, .error-code {
   color: #f2e746;
-
-  &:hover, &:focus, &:active {
-    color: #f2e746;
-  }
 }
 
-.tags > li {
-  display: inline-block;
-
+.offcanvas-menu .offcanvas-inner .sp-module ul > li {
   a {
-    background: rgba(242, 231, 70, 0.1);
     color: #f2e746;
 
-    &:hover {
-      background: #f2e746;
+    &:focus, &:hover {
+      color: #f2e746;
     }
   }
-}
 
-.article-social-share .social-share-icon ul li a {
-  color: #252525;
+  span {
+    color: #f2e746;
 
-  &:hover, &:focus {
-    background: #f2e746;
+    &:focus, &:hover {
+      color: #f2e746;
+    }
   }
-}
-
-.pager > li a {
-  border: 1px solid #ededed;
-  color: #252525;
 }
 
 .sp-megamenu-parent {
-  > li {
-    > a {
-      color: #252525;
-    }
-
-    &:hover > a {
+  .sp-dropdown li.sp-menu-item {
+    &.active > a {
       color: #f2e746;
     }
 
-    &.active {
-      > a, &:hover > a {
-        color: #f2e746;
-      }
-    }
-  }
+    > a {
+      color: #f2e746;
 
-  .sp-dropdown {
-    .sp-dropdown-inner {
-      background: #000;
-    }
-
-    li.sp-menu-item {
-      > a {
-        color: #f2e746;
-
-        &:hover {
-          color: #f2e746;
-        }
-      }
-
-      &.active > a {
+      &:hover {
         color: #f2e746;
       }
     }
@@ -103,14 +55,126 @@ a {
   .sp-mega-group > li > a {
     color: #f2e746;
   }
+
+  > li {
+    &.active {
+      &:hover > a, > a {
+        color: #f2e746;
+      }
+    }
+
+    &:hover > a {
+      color: #f2e746;
+    }
+  }
 }
 
-#offcanvas-toggler > .fa {
-  color: #252525;
-
-  &:hover, &:focus, &:active {
+.sp-module {
+  .latestnews > div > a:hover, ul > li > a:hover {
     color: #f2e746;
   }
+}
+
+.tags > li a {
+  background: rgba(242, 231, 70, 0.1);
+  color: #f2e746;
+}
+
+a {
+  color: #f2e746;
+
+  &:active, &:focus, &:hover {
+    color: #f2e746;
+  }
+}
+
+ul.social-icons > li a:hover {
+  color: #f2e746;
+}
+
+.article-social-share .social-share-icon ul li a {
+  &:focus, &:hover {
+    background: #f2e746;
+  }
+}
+
+.search .btn-toolbar button, .sp-module .tagscloud .tag-name:hover, .sp-page-title, .sp-preloader > div, .tags > li a:hover {
+  background: #f2e746;
+}
+
+#sp-header, .layout-boxed .body-innerwrapper, .sp-preloader > div:after {
+  background: #fff;
+}
+
+#sp-top-bar {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+#sp-bottom {
+  .sp-module-content .latestnews > li > a > span {
+    color: #fff;
+  }
+
+  a {
+    &:active, &:focus, &:hover {
+      color: #fff;
+    }
+  }
+}
+
+#sp-footer a {
+  &:active, &:focus, &:hover {
+    color: #fff;
+  }
+}
+
+#sp-top-bar a {
+  color: #fff;
+}
+
+.tags > li {
+  display: inline-block;
+}
+
+#offcanvas-toggler > .fa, .article-social-share .social-share-icon ul li a, .pager > li a {
+  color: #252525;
+}
+
+.pagination > li > {
+  a {
+    color: #252525;
+
+    &:focus, &:hover {
+      color: #252525;
+    }
+  }
+
+  span {
+    color: #252525;
+
+    &:focus, &:hover {
+      color: #252525;
+    }
+  }
+}
+
+.sp-megamenu-parent > li > a {
+  color: #252525;
+}
+
+.sp-module {
+  .latestnews > div > a, ul > li > a {
+    color: #252525;
+  }
+}
+
+.pager > li a {
+  border: 1px solid #ededed;
+}
+
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  background: #000;
 }
 
 .offcanvas-menu {
@@ -118,12 +182,8 @@ a {
   color: #f2e746;
 
   .offcanvas-inner .sp-module ul > li {
-    a, span, a:hover, span:hover, a:focus, span:focus {
-      color: #f2e746;
-    }
-
     &.menu-parent > {
-      a > .menu-toggler, .menu-separator > .menu-toggler {
+      .menu-separator > .menu-toggler, a > .menu-toggler {
         color: rgba(242, 231, 70, 0.5);
       }
     }
@@ -134,79 +194,57 @@ a {
   }
 }
 
-.btn-primary, .sppb-btn-primary, .btn-primary:hover, .sppb-btn-primary:hover {
-  border-color: #f2e746;
+.btn-primary {
   background-color: #f2e746;
+  border-color: #f2e746;
+
+  &:hover {
+    background-color: #f2e746;
+    border-color: #f2e746;
+  }
 }
 
-ul.social-icons > li a:hover {
-  color: #f2e746;
-}
+.pagination > .active > {
+  a {
+    background-color: #f2e746;
+    border-color: #f2e746;
 
-.sp-page-title {
-  background: #f2e746;
-}
-
-.layout-boxed .body-innerwrapper {
-  background: #fff;
-}
-
-.sp-module {
-  ul > li > a, .latestnews > div > a {
-    color: #252525;
-
-    &:hover {
-      color: #f2e746;
+    &:focus, &:hover {
+      background-color: #f2e746;
+      border-color: #f2e746;
     }
   }
 
-  .tagscloud .tag-name:hover {
-    background: #f2e746;
+  span {
+    background-color: #f2e746;
+    border-color: #f2e746;
+
+    &:focus, &:hover {
+      background-color: #f2e746;
+      border-color: #f2e746;
+    }
   }
 }
 
-.search .btn-toolbar button {
-  background: #f2e746;
+.sppb-btn-primary {
+  background-color: #f2e746;
+  border-color: #f2e746;
+
+  &:hover {
+    background-color: #f2e746;
+    border-color: #f2e746;
+  }
 }
 
-#sp-footer, #sp-bottom {
+#sp-bottom, #sp-footer {
   background: #171717;
   color: #fff;
 }
 
-#sp-footer a, #sp-bottom a {
+#sp-bottom a, #sp-footer a {
   color: #a2a2a2;
-}
-
-#sp-footer a:hover, #sp-bottom a:hover, #sp-footer a:active, #sp-bottom a:active, #sp-footer a:focus {
-  color: #fff;
-}
-
-#sp-bottom {
-  a:focus, .sp-module-content .latestnews > li > a > span {
-    color: #fff;
-  }
 }
 
 .sp-comingsoon body {
   background-color: #f2e746;
-}
-
-.pagination > {
-  li > {
-    a, span, a:hover, span:hover, a:focus, span:focus {
-      color: #252525;
-    }
-  }
-
-  .active > {
-    a, span, a:hover, span:hover, a:focus, span:focus {
-      border-color: #f2e746;
-      background-color: #f2e746;
-    }
-  }
-}
-
-.error-code, .coming-soon-number {
-  color: #f2e746;
 }
