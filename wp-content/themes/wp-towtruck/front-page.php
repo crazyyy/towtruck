@@ -93,7 +93,7 @@
         <div class="sppb-col-md-12" id="column-wrap-id-1595776894323">
           <div id="column-id-1595776894323" class="sppb-column sppb-column--content">
             <div class="sppb-column-addons">
-              <div id="sppb-addon-1595776894329" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
+              <div id="sppb-addon-1595776894329" class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                 <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
                   <div class="sppb-addon-content">
                     <h2><?php the_field( 'primary_title' ); ?></h2>
@@ -114,9 +114,9 @@
         <div class="sppb-col-md-12" id="column-wrap-id-1595776894338">
           <div id="column-id-1595776894338" class="sppb-column">
             <div class="sppb-column-addons">
-              <div id="sppb-addon-1595778156771" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
+              <div id="sppb-addon-1595778156771" class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
                 <div class="sppb-addon sppb-addon-header sppb-text-center">
-                  <h2 class="sppb-addon-title">ПОЧЕМУ МЫ</h2>
+                  <h4 class="sppb-addon-title"><?php the_field( 'why_we_are_title' ); ?></h4>
                 </div>
               </div>
             </div>
@@ -126,89 +126,51 @@
     </div>
   </section>
 
-  <section id="section-id-1603524476118" class="sppb-section ">
+  <section class="sppb-section whyweare-section">
     <div class="sppb-row-container ">
       <div class="sppb-row">
-        <div class="sppb-col-md-12" id="column-wrap-id-1603524476119">
-          <div id="column-id-1603524476119" class="sppb-column">
+        <div class="sppb-col-md-12">
+          <div class="sppb-column">
             <div class="sppb-column-addons">
-              <div id="section-id-1603524476120" class="sppb-section ">
-                <div class="sppb-container-inner ">
+              <div class="sppb-section ">
+                <div class="sppb-container-inner whyweare-main">
                   <div class="sppb-row">
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603524476121">
-                      <div id="column-id-1603524476121" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603524476610" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-feature  ">
-                              <div class="sppb-addon-content sppb-text-center">
+
+                    <div class="sppb-col-md-1"></div>
+                    <?php if ( have_rows( 'why_we_are_reasons' ) ) : ?>
+                      <?php while ( have_rows( 'why_we_are_reasons' ) ) : the_row(); ?>
+
+                        <div class="sppb-col-md-2">
+                          <div class="sppb-column">
+                            <div class="sppb-column-addons">
+                              <div class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: zoomIn;">
+                                <div class="sppb-addon sppb-addon-feature  ">
+                                  <div class="sppb-addon-content sppb-text-center">
                                     <span class="sppb-img-container">
-                                      <img class="sppb-img-responsive" src="<?php echo get_template_directory_uri();
-                                      ?>/img/kruglosutochno.jpeg"
-                                           alt="">
+                                      <?php $illustration = get_sub_field( 'illustration' ); ?>
+                                      <?php if ( $illustration ) : ?>
+                                        <img src="<?php echo esc_url( $illustration['url'] ); ?>" alt="<?php echo esc_attr( $illustration['alt'] ); ?>" />
+                                      <?php endif; ?>
                                     </span>
-                                <div class="sppb-media-content">
-                                  <div class="sppb-addon-text"></div>
+                                    <div class="sppb-media-content">
+                                      <div class="sppb-addon-text"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
+                                <div class="sppb-addon sppb-addon-header sppb-text-center">
+                                  <h5 class="sppb-addon-title"><?php the_sub_field( 'reason' ); ?></h5>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div id="sppb-addon-1603524476615" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-header sppb-text-center">
-                              <h2 class="sppb-addon-title">РАБОТАЕМ КРУГЛОСУТОЧНО</h2>
-                            </div>
-                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603524476123">
-                      <div id="column-id-1603524476123" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603524476620" class=" sppb-wow flipInY clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: flipInY;">
-                            <div class="sppb-addon sppb-addon-feature  ">
-                              <div class="sppb-addon-content sppb-text-center">
-                                    <span class="sppb-img-container">
-                                      <img class="sppb-img-responsive" src="<?php echo get_template_directory_uri();
-                                      ?>/img/servis3.png" alt="">
-                                    </span>
-                                <div class="sppb-media-content">
-                                  <div class="sppb-addon-text"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603524476625" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1400ms" style="visibility: visible; animation-duration: 1400ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-header sppb-text-center">
-                              <h2 class="sppb-addon-title">КАЧЕСТВЕННЫЙ СЕРВИС</h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603524476125">
-                      <div id="column-id-1603524476125" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603525541640" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="2400ms" style="visibility: visible; animation-duration: 2400ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-feature  ">
-                              <div class="sppb-addon-content sppb-text-center">
-                                <span class="sppb-img-container">
-                                  <img class="sppb-img-responsive" src="<?php echo get_template_directory_uri();
-                                  ?>/img/nasvyazi2.png"
-                                       alt="">
-                                </span>
-                                <div class="sppb-media-content">
-                                  <div class="sppb-addon-text"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603524476445" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1800ms" style="visibility: visible; animation-duration: 1800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-header sppb-text-center">
-                              <h2 class="sppb-addon-title">ПОСТОЯННО НА СВЯЗИ</h2>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
+                      <?php endwhile; ?>
+                    <?php endif; ?>
+                    <div class="sppb-col-md-1"></div>
+
                   </div>
                 </div>
               </div>
@@ -223,16 +185,13 @@
                     <div class="sppb-col-md-6" id="column-wrap-id-1603528047597">
                       <div id="column-id-1603528047597" class="sppb-column">
                         <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603528047600" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
+                          <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms"
+                               style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
+                            <div class="sppb-addon sppb-addon-module">
                               <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-                                </div>
+                                <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>" class="button-red-action">
+                                  Викликати
+                                </a>
                               </div>
                             </div>
                           </div>

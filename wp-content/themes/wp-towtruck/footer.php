@@ -10,9 +10,9 @@
                       <div class="sppb-col-md-12" id="column-wrap-id-1595858740136">
                         <div id="column-id-1595858740136" class="sppb-column">
                           <div class="sppb-column-addons">
-                            <div id="sppb-addon-1595858740137" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
+                            <div class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
                               <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                <h2 class="sppb-addon-title">НАШИ КОНТАКТЫ</h2>
+                                <h2 class="sppb-addon-title">НАШІ КОНТАКТИ</h2>
                               </div>
                             </div>
                             <div id="section-id-1595858740138" class="sppb-section ">
@@ -73,7 +73,7 @@
               <div class="sp-column ">
                 <div class="custom">
                 </div>
-                <span class="sp-copyright">&copy; <?php echo date("Y"); ?> Собственность <?php bloginfo('name'); ?>.</span>
+                <span class="sp-copyright">&copy; <?php echo date("Y"); ?> Власність <?php bloginfo('name'); ?>.</span>
               </div>
             </div>
           </div>

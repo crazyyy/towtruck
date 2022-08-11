@@ -32,13 +32,6 @@
 
   <div class="body-wrapper">
     <div class="body-innerwrapper">
-      <section id="sp-section-1">
-        <div class="row">
-          <div id="sp-title" class="col-lg-12 ">
-            <div class="sp-column "></div>
-          </div>
-        </div>
-      </section>
       <section id="sp-main-body">
         <div class="row">
           <main id="sp-component" class="col-lg-12 " role="main">
@@ -90,20 +83,20 @@
                                               </div>
                                               <ul>
                                                 <li class="">
-                                                  <a href="#uslugi1" data-scroll-to="true">УСЛУГИ</a>
+                                                  <a href="#uslugi1" data-scroll-to="true">ПОСЛУГИ</a>
                                                 </li>
                                                 <li class="sppb-active">
-                                                  <a href="#pochemu1" data-scroll-to="true">ПОЧЕМУ МЫ</a>
+                                                  <a href="#pochemu1" data-scroll-to="true">ЧОМУ МИ</a>
                                                 </li>
                                                 <li class="">
-                                                  <a href="#vyzvat1" data-scroll-to="true">ВЫЗВАТЬ ПОМОЩЬ</a>
+                                                  <a href="#vyzvat1" data-scroll-to="true">ВИКЛИКАТИ ДОПОМОГУ</a>
                                                 </li>
                                               </ul>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185562485" class=" sppb-wow flipInX clearfix sppb-animated" data-sppb-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: flipInX;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h2 class="sppb-addon-title">РЕШЕНИЕ ВАШИХ ПРОБЛЕМ <br>НАША ЗАДАЧА </h2>
+                                              <h2 class="sppb-addon-title">РІШЕННЯ ВАШИХ ПРОБЛЕМ НАШЕ ЗАВДАННЯ</h2>
                                             </div>
                                           </div>
                                         </div>
@@ -178,7 +171,7 @@
                                                   <form class="reg_form" action="/" method="post" enctype="multipart/form-data">
                                                     <div>
                                                       <div class="joomly-contactus-div">
-                                                        <input type="text" placeholder="Ваше имя" class="contactus-fields" name="field1">
+                                                        <input type="text" placeholder="Ваше ім'я" class="contactus-fields" name="field1">
                                                       </div>
                                                       <div class="joomly-contactus-div">
                                                         <input type="text" placeholder="Ваш телефон*" class="contactus-fields" name="field2" required="">
@@ -198,29 +191,35 @@
                                     <div class="sppb-col-md-6" id="column-wrap-id-1602918408009">
                                       <div id="column-id-1602918408009" class="sppb-column">
                                         <div class="sppb-column-addons">
+                                          <div class="sppb-wow fadeInLeftBig clearfix sppb-animated"
+                                               data-sppb-wow-duration="600ms" style="visibility: visible; animation-duration: 800ms; animation-name: fadeInLeftBig;">
+                                            <div class="sppb-addon sppb-addon-header sppb-text-center">
+                                              <h3 class="sppb-addon-title">ЕВАКУАЦІЯ АВТОМОБІЛЯ</h3>
+                                            </div>
+                                          </div>
                                           <div id="sppb-addon-1602918408004" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ЗАПУСК ДВИГАТЕЛЯ</h3>
+                                              <h3 class="sppb-addon-title">ЗАПУСК ДВИГУНА</h3>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1602918408005" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ЗАМЕНА КОЛЕСА</h3>
+                                              <h3 class="sppb-addon-title">ЗАМІНА КОЛЕСА</h3>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1602918408006" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ВСКРЫТИЕ АВТО</h3>
+                                              <h3 class="sppb-addon-title">ВІДКРИТТЯ АВТО</h3>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1602918408007" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ПОДВОЗ ТОПЛИВА</h3>
+                                              <h3 class="sppb-addon-title">ПІДВОЗ ПАЛИВА</h3>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1602918408008" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2400ms" style="visibility: visible; animation-duration: 2400ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ДИАГНОСТИКА АВТО</h3>
+                                              <h3 class="sppb-addon-title">ДІАГНОСТИКА АВТО</h3>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1602927939362" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2400ms" style="visibility: visible; animation-duration: 2400ms; animation-name: fadeInLeftBig;">
@@ -267,13 +266,13 @@
                                               </div>
                                               <ul>
                                                 <li class="">
-                                                  <a href="#uslugi1" data-scroll-to="true"> УСЛУГИ</a>
+                                                  <a href="#uslugi1" data-scroll-to="true">ПОСЛУГИ</a>
                                                 </li>
                                                 <li class="">
-                                                  <a href="#pochemu1" data-scroll-to="true"> ПОЧЕМУ МЫ</a>
+                                                  <a href="#pochemu1" data-scroll-to="true">ЧОМУ МИ</a>
                                                 </li>
                                                 <li class="">
-                                                  <a href="#vyzvat1" data-scroll-to="true"> ВЫЗВАТЬ ПОМОЩЬ</a>
+                                                  <a href="#vyzvat1" data-scroll-to="true">ВИКЛИКАТИ ДОПОМОГУ</a>
                                                 </li>
                                               </ul>
                                             </div>
@@ -293,7 +292,7 @@
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
                                               <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
-                                                  <span class="fa fa-volume-control-phone sppb-addon-title-icon"></span> +38(098) 685-29-40
+                                                  <span class="fa fa-volume-control-phone sppb-addon-title-icon"></span> <?php the_field( 'main_phone_pretty', 'option' ); ?>
                                                 </h3>
                                               </a>
                                             </div>
@@ -304,7 +303,7 @@
                                               <a href="tel:<?php the_field( 'second_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
                                                 <span class="fa fa-volume-control-phone
-                                                sppb-addon-title-icon"></span> +38(098) 690-32-01
+                                                sppb-addon-title-icon"></span> <?php the_field( 'second_phone_pretty', 'option' ); ?>
                                                 </h3>
                                               </a>
                                             </div>
@@ -339,34 +338,39 @@
                                     <div class="sppb-col-md-6" id="column-wrap-id-1603185532002">
                                       <div id="column-id-1603185532002" class="sppb-column">
                                         <div class="sppb-column-addons">
+                                          <div class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: fadeInLeftBig;">
+                                            <div class="sppb-addon sppb-addon-header sppb-text-center">
+                                              <h5 class="sppb-addon-title">ЕВАКУАЦІЯ АВТОМОБІЛЯ</h5>
+                                            </div>
+                                          </div>
                                           <div id="sppb-addon-1603185532003" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ЗАПУСК ДВИГАТЕЛЯ</h3>
+                                              <h5 class="sppb-addon-title">ЗАПУСК ДВИГУНА</h5>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185532004" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ЗАМЕНА КОЛЕСА</h3>
+                                              <h5 class="sppb-addon-title">ЗАМІНА КОЛЕСА</h5>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185532005" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ВСКРЫТИЕ АВТО</h3>
+                                              <h5 class="sppb-addon-title">ВІДКРИТТЯ АВТО</h5>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185532006" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2000ms" style="visibility: visible; animation-duration: 2000ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ПОДВОЗ ТОПЛИВА</h3>
+                                              <h5 class="sppb-addon-title">ПІДВОЗ ПАЛИВА</h5>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185532007" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2400ms" style="visibility: visible; animation-duration: 2400ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">ДИАГНОСТИКА АВТО</h3>
+                                              <h5 class="sppb-addon-title">ДІАГНОСТИКА АВТО</h5>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185532008" class="sppb-wow fadeInLeftBig clearfix sppb-animated" data-sppb-wow-duration="2400ms" style="visibility: visible; animation-duration: 2400ms; animation-name: fadeInLeftBig;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h3 class="sppb-addon-title">РЕМОНТ АВТО</h3>
+                                              <h5 class="sppb-addon-title">РЕМОНТ АВТО</h5>
                                             </div>
                                           </div>
                                         </div>

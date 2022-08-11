@@ -242,7 +242,7 @@
     font-weight: 200;
   }
 
-  h2.sppb-addon-title {
+  .sppb-addon-title {
     margin: 0 0 30px;
     padding: 0;
     text-shadow: 1px 1px 0 #000;
@@ -286,7 +286,7 @@
   }
 }
 
-#sppb-addon-1595861756388 h2.sppb-addon-title, #sppb-addon-1603705651744 h2.sppb-addon-title, #sppb-addon-1603705666917 h2.sppb-addon-title {
+#sppb-addon-1595861756388 .sppb-addon-title, #sppb-addon-1603705651744 .sppb-addon-title, #sppb-addon-1603705666917 .sppb-addon-title {
   margin: 0 0 30px;
   padding: 0;
   text-shadow: 0 1px 0 #fff;
@@ -375,10 +375,25 @@
     font-weight: 600;
   }
 
-  h2.sppb-addon-title {
+  .sppb-addon-title {
     margin: 0 0 30px;
     padding: 0;
     text-shadow: 0 0 0 #fff;
+  }
+}
+
+.whyweare-section {
+  padding-bottom: 20px;
+  .sppb-col-md-2 {
+    text-align: center;
+    img {
+      width: 80%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+  .whyweare-main {
+
   }
 }
 
@@ -648,11 +663,16 @@
 
   #pochemu1 {
     margin: 0;
-    padding: 10px 0 50px;
+    padding: 20px 0 20px;
   }
 }
 
-#sppb-addon-1595778156771, #sppb-addon-1603524476445, #sppb-addon-1603524476615, #sppb-addon-1603524476625 {
+#sppb-addon-1595778156771 {
+  box-shadow: 0 0 0 0 #fff;
+  color: #b41017;
+  margin: 0;
+}
+#sppb-addon-1603524476445, #sppb-addon-1603524476615, #sppb-addon-1603524476625 {
   box-shadow: 0 0 0 0 #fff;
   color: #b41017;
   margin: 0 0 30px;
@@ -663,14 +683,14 @@
     font-weight: 800;
   }
 
-  h2.sppb-addon-title {
-    margin: 0 0 30px;
+  .sppb-addon-title {
+    margin: 0 0 10px;
     padding: 0;
     text-shadow: 2px 2px 1px #fff;
   }
 }
 
-#sppb-addon-1603524476445 h2.sppb-addon-title, #sppb-addon-1603524476615 h2.sppb-addon-title, #sppb-addon-1603524476625 h2.sppb-addon-title {
+#sppb-addon-1603524476445 .sppb-addon-title, #sppb-addon-1603524476615 .sppb-addon-title, #sppb-addon-1603524476625 .sppb-addon-title {
   margin: 0 0 30px;
   padding: 0;
   text-shadow: 2px 2px 1px #fff;
@@ -728,7 +748,7 @@
     line-height: 26px;
   }
 
-  h2.sppb-addon-title {
+  .sppb-addon-title {
     margin: 0 0 30px;
     padding: 0;
     text-shadow: 0 1px 0 #000;
