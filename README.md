@@ -40,6 +40,11 @@ https://эвакуатор-дёшево.рус/
 cool colors https://mosevo.ru/
 https://help-car.ru
 
+## CSS SCSS 
+https://www.cssportal.com/scss-to-css/
+https://clean-css.github.io/
+https://www.cssportal.com/css-optimize/
+https://css2sass.herokuapp.com/
 
 ### Gradients
   * @include linear-gradient(yellow, blue);
