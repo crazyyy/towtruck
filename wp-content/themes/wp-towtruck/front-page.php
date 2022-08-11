@@ -41,7 +41,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms"
+                              <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1100ms"
                                    style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
                                 <div class="sppb-addon sppb-addon-module">
                                   <div class="sppb-addon-content">
