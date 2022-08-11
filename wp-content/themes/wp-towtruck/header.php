@@ -178,7 +178,9 @@
                                                       </div>
                                                     </div>
                                                     <div>
-                                                      <button type="submit" value="save" class="contactus-button contactus-submit contactus-center" style="background-color: #ed1313;" id="button-contactus-lightbox95">ВЫЗВАТЬ</button>
+                                                      <button type="submit" value="save" class="contactus-button
+                                                      contactus-submit contactus-center" style="background-color:
+                                                      #ed1313;" id="button-contactus-lightbox95">Викликати</button>
                                                     </div>
                                                   </form>
                                                 </div>

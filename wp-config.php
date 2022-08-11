@@ -7,9 +7,6 @@ const WP_CACHE = false;
 @ini_set('session.use_only_cookies', true);
 //END Really Simple SSL
 
-//define('DB_NAME', 'DBNAME');
-//define('DB_USER', 'DBUSER');
-//define('DB_PASSWORD', 'DBPASS');
 const DB_NAME       = 'towtruck';
 const DB_USER       = 'towtruck';
 const DB_PASSWORD   = 'towtruck';
