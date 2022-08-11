@@ -9,215 +9,55 @@
             <div class="sppb-column-addons">
               <div id="section-id-1595773731858" class="sppb-section ">
                 <div class="sppb-container-inner sppb-section-content-center">
-                  <div class="sppb-row sppb-no-gutter sppb-align-center">
 
+                  <h2 class="inner-content--title services-content--title"><?php the_field( 'services_title' );
+                  ?></h2>
 
-                    <div class="sppb-col-md-4" id="column-wrap-id-1595773731859">
-                      <div id="column-id-1595773731859" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603365285203" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ЗАПУСК ДВИГАТЕЛЯ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ЗАПУСК ДВИГАТЕЛЯ</h3>
-                                      <p>Стоимость от 1500 руб.</p>
-                                      <p>Запуск ДВС переносным профессиональным пуско зарядным устройством.</p>
-                                      <p> Замена аккумулятора.</p>
+                  <div class="sppb-row sppb-no-gutter sppb-align-center services-container">
+
+                    <?php $services_list = get_field( 'services_list' ); ?>
+                    <?php if ( $services_list ) : ?>
+                      <?php foreach ( $services_list as $post ) :  ?>
+                        <?php setup_postdata( $post ); ?>
+                        <div class="sppb-col-md-4">
+                          <div id="column-id-1595773731859" class="sppb-column">
+                            <div class="sppb-column-addons">
+                              <div id="sppb-addon-1603365285203" class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
+                                <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
+                                  <div class="threeD-content-wrap">
+                                    <div class="threeD-item">
+                                      <div class="threeD-flip-front" style="background-image: url(<?php echo the_post_thumbnail_url('medium'); ?>);">
+                                        <div class="threeD-content-inner">
+                                          <h3><?php the_title(); ?></h3>
+                                        </div>
+                                      </div>
+                                      <div class="threeD-flip-back">
+                                        <div class="threeD-content-inner">
+                                          <h4><?php the_title(); ?></h4>
+                                          <?php the_content(); ?>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603527931097" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="sppb-col-md-4" id="column-wrap-id-1595773731859">
-                      <div id="column-id-1595773731859" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603365285203" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ЗАПУСК ДВИГАТЕЛЯ</h2>
-                                    </div>
+                              <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms"
+                                   style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
+                                <div class="sppb-addon sppb-addon-module">
+                                  <div class="sppb-addon-content">
+                                    <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>" class="button-red-action">
+                                      Викликати
+                                    </a>
                                   </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ЗАПУСК ДВИГАТЕЛЯ</h3>
-                                      <p>Стоимость от 1500 руб.</p>
-                                      <p>Запуск ДВС переносным профессиональным пуско зарядным устройством.</p>
-                                      <p> Замена аккумулятора.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603527931097" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      <?php endforeach; ?>
+                      <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
 
-                    <div class="sppb-col-md-4" id="column-wrap-id-1595773731859">
-                      <div id="column-id-1595773731859" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603365285203" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ЗАПУСК ДВИГАТЕЛЯ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ЗАПУСК ДВИГАТЕЛЯ</h3>
-                                      <p>Стоимость от 1500 руб.</p>
-                                      <p>Запуск ДВС переносным профессиональным пуско зарядным устройством.</p>
-                                      <p> Замена аккумулятора.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603527931097" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-
-
-                    <div class="sppb-col-md-4" id="column-wrap-id-1595773731862">
-                      <div id="column-id-1595773731862" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603365285208" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ЗАМЕНА КОЛЕСА</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ЗАМЕНА КОЛЕСА</h3>
-                                      <p>Стоимость от 1500 руб.</p>
-                                      <p>Замена колес, ремонт проколов с выездом, подкачка шин.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603528047520" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-                                                                       </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1595773731873">
-                      <div id="column-id-1595773731873" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603365853918" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ДИАГНОСТИКА АВТО</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ДИАГНОСТИКА АВТО</h3>
-                                      <p>Стоимость от 3000 руб.</p>
-                                      <p>Профессиональная комп. диагностика с выездом. Чтение и удаление ошибок.</p>
-                                      <p> Адаптация.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603528047515" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -226,423 +66,16 @@
 
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="section-id-1603378650872" class="sppb-section ">
-    <div class="sppb-row-container ">
-      <div class="sppb-row">
-        <div class="sppb-col-md-12" id="column-wrap-id-1603378650873">
-          <div id="column-id-1603378650873" class="sppb-column">
-            <div class="sppb-column-addons">
-              <div id="section-id-1603378650874" class="sppb-section ">
-                <div class="sppb-container-inner sppb-section-content-center">
-                  <div class="sppb-row sppb-no-gutter sppb-align-center">
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603378650875">
-                      <div id="column-id-1603378650875" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603378650876" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ВСКРЫТИЕ АВТО</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ВСКРЫТИЕ АВТО</h3>
-                                      <p>Стоимость от 2500 руб.</p>
-                                      <p>профессионально вскроем Ваш авто.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603528047563" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603378650877">
-                      <div id="column-id-1603378650877" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603378650878" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ПОДВОЗ ТОПЛИВА</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ПОДВОЗ ТОПЛИВА</h3>
-                                      <p>Стоимость от 1500 руб.</p>
-                                      <p>Если Вы заглохли в дороге, у вас закончилось топливо - звоните, пишите. Доставим, заправим, запустим, отправим.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603528047568" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1603378650879">
-                      <div id="column-id-1603378650879" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1603378650880" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>РЕМОНТ АВТО</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>РЕМОНТ АВТО</h3>
-                                      <p>Стоимость от 2500 руб.</p>
-                                      <p>К вашим услугам автомеханик, автоэлектрик.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1603528047581" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h3 class="inner-content--title"><?php the_field( 'services_description_title' ); ?></h3>
+      <div class="inner-content--content">
+        <?php the_field( 'services_description' ); ?>
       </div>
+
     </div>
   </section>
-  <section id="section-id-1607532488424" class="sppb-section ">
-    <div class="sppb-row-container ">
-      <div class="sppb-row">
-        <div class="sppb-col-md-12" id="column-wrap-id-1607532488425">
-          <div id="column-id-1607532488425" class="sppb-column">
-            <div class="sppb-column-addons">
-              <div id="section-id-1607532488426" class="sppb-section ">
-                <div class="sppb-container-inner sppb-section-content-center">
-                  <div class="sppb-row sppb-no-gutter sppb-align-center">
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488427">
-                      <div id="column-id-1607532488427" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488428" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ЗАМЕНА АККУМУЛЯТОРА</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ЗАМЕНА АККУМУЛЯТОРА</h3>
-                                      <p>Отечественный автомобиль <br>1500 руб. </p>
-                                      <p>Иномарки (в зависимости от сложности установки) <br>2000-3500 руб. </p>
-                                      <p>Грузовые автомобили <br>2000-3500 рублей </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488429" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488430">
-                      <div id="column-id-1607532488430" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488431" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ОТКЛЮЧЕНИЕ СИГНАЛИЗАЦИИ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ОТКЛЮЧЕНИЕ СИГНАЛИЗАЦИИ</h3>
-                                      <p>Отключение сигнализации от <br>3000 рублей <br> Отключение спутника <br>5000-8000 рублей <br> Отключение метки <br>5000-8000 рублей <br> Отключение иммобилайзера <br>6000-10000 рублей </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488432" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488433">
-                      <div id="column-id-1607532488433" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488434" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ОТОГРЕВ МАШИНЫ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ОТОГРЕВ МАШИНЫ</h3>
-                                      <p>Легковые автомобили <br>4000-6000 рублей </p>
-                                      <p>Джипы, минивэны <br>5000-6000 рублей </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488435" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="section-id-1607532488436" class="sppb-section ">
-    <div class="sppb-row-container ">
-      <div class="sppb-row">
-        <div class="sppb-col-md-12" id="column-wrap-id-1607532488437">
-          <div id="column-id-1607532488437" class="sppb-column">
-            <div class="sppb-column-addons">
-              <div id="section-id-1607532488438" class="sppb-section ">
-                <div class="sppb-container-inner sppb-section-content-center">
-                  <div class="sppb-row sppb-no-gutter sppb-align-center">
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488439">
-                      <div id="column-id-1607532488439" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488440" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>СНЯТИЕ СЕКРЕТОК</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>СНЯТИЕ СЕКРЕТОК</h3>
-                                      <p>Потеряли секретный ключ - не проблема, быстро и без повреждений уберём секретку с колеса.</p>
-                                      <p>Все автомобили <br>1500-2500 </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488441" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488442">
-                      <div id="column-id-1607532488442" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488443" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>РЕМОНТ ЗАМКА ЗАЖИГАНИЯ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>РЕМОНТ ЗАМКА ЗАЖИГАНИЯ</h3>
-                                      <p>Стоимость от 5000 руб.</p>
-                                      <p>Ремонтируем замки зажигания при любой поломке с выездом мастера.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488444" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sppb-col-md-4" id="column-wrap-id-1607532488445">
-                      <div id="column-id-1607532488445" class="sppb-column">
-                        <div class="sppb-column-addons">
-                          <div id="sppb-addon-1607532488446" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1600ms" style="visibility: visible; animation-duration: 1600ms; animation-name: zoomIn;">
-                            <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
-                              <div class="threeD-content-wrap">
-                                <div class="threeD-item">
-                                  <div class="threeD-flip-front">
-                                    <div class="threeD-content-inner">
-                                      <h2>ИЗГОТОВЛЕНИЕ КЛЮЧЕЙ</h2>
-                                    </div>
-                                  </div>
-                                  <div class="threeD-flip-back">
-                                    <div class="threeD-content-inner">
-                                      <h3>ИЗГОТОВЛЕНИЕ КЛЮЧЕЙ</h3>
-                                      <p>Если у вас утерян или сломан ключ - мы сделаем и при необходимости пропишем вам новый в удобном вам месте или у нас в автосервисе. </p>
-                                      <p>Цена обговаривается индивидуально в зависимости от марки и модели автомобиля.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="sppb-addon-1607532488447" class=" sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: bounceIn;">
-                            <div class="sppb-addon sppb-addon-module ">
-                              <div class="sppb-addon-content">
-                                <div class="custom">
-                                  <a href="tel:+380986852940">
-                                    <div>
-                                      <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
-                                    </div>
-                                  </a>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id="section-id-1595776894324" class="sppb-section " data-sppb-parallax="on" style="background-attachment: fixed; background-position: 50% -19px;">
     <div class="sppb-row-overlay"></div>
     <div class="sppb-row-container ">
@@ -663,46 +96,8 @@
               <div id="sppb-addon-1595776894329" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                 <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
                   <div class="sppb-addon-content">
-                    <h2>Title Mega</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem
-                      ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum
-                      dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor
-                      sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit
-                      amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem
-                      ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum
-                      dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor
-                      sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit
-                      amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem
-                      ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum
-                      dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor
-                      sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit
-                      amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem
-                      ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum
-                      dolor sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor
-                      sit amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit
-                      amet, consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. Amet consequatur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur</p>
+                    <h2><?php the_field( 'primary_title' ); ?></h2>
+                    <?php the_content(); ?>
                   </div>
                 </div>
               </div>
@@ -712,6 +107,7 @@
       </div>
     </div>
   </section>
+
   <section id="pochemu1" class="sppb-section  sppb-hidden-sm sppb-hidden-xs">
     <div class="sppb-row-container ">
       <div class="sppb-row">
@@ -729,6 +125,7 @@
       </div>
     </div>
   </section>
+
   <section id="section-id-1603524476118" class="sppb-section ">
     <div class="sppb-row-container ">
       <div class="sppb-row">
@@ -830,7 +227,7 @@
                             <div class="sppb-addon sppb-addon-module ">
                               <div class="sppb-addon-content">
                                 <div class="custom">
-                                  <a href="tel:+380986852940">
+                                  <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
                                     <div>
                                       <input class="input_button" type="submit" style="background-color: #e31e25; top:60%;" id="button-contactus-lightbox-form103" value="ВЫЗВАТЬ">
                                     </div>

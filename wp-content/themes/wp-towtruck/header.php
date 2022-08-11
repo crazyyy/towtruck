@@ -7,8 +7,6 @@
 
     <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
-    <?php wp_head(); ?>
-
     <link href="//www.google-analytics.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com" rel="dns-prefetch">
     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch">
@@ -26,38 +24,7 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="<?php echo get_template_directory_uri();
-    ?>/style.css" rel="stylesheet" type="text/css">
-
-    <script type="application/json" class="joomla-script-options loaded">
-      {
-        "csrf.token": "48f2f9ed0005c839eec4beb448ba33f8",
-        "system.paths": {
-          "root": "",
-          "base": ""
-        }
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js" integrity="sha512-QDsjSX1mStBIAnNXx31dyvw4wVdHjonOwrkaIhpiIlzqGUCdsI62MwQtHpJF+Npy2SmSlGSROoNWQCOFpqbsOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="<?php echo get_template_directory_uri();
-    ?>/js/jquery.parallax.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri();
-    ?>/js/sppagebuilder.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js" integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js" integrity="sha512-7rusk8kGPFynZWu26OKbTeI+QPoYchtxsmPeBqkHIEXJxeun4yJ4ISYe7C6sz9wdxeE1Gk3VxsIWgCZTc+vX3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="<?php echo get_template_directory_uri();
-    ?>/js/main.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri();
-    ?>/js/core.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js" integrity="sha512-0tWfLL+YANip9Uo2YUY4/SxvwDgPUuoSUcIXPFULXiXXgLKmiC/qCeDxnhl+mLobu6e/dSlyhGheCtzd9+RLCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="<?php echo get_template_directory_uri();
-    ?>/js/scripts.js" type="text/javascript"></script>
+    <?php wp_head(); ?>
 
   </head>
   <body <?php body_class('site helix-ultimate com-sppagebuilder view-page layout-default task-none itemid-101 ru-ru ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right'); ?>>
@@ -158,10 +125,10 @@
                                         <div class="sppb-column-addons">
                                           <div id="sppb-addon-1595861756388" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <a href="tel:+380986852940">
+                                              <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
                                                 <span
-                                                  class="fa fa-volume-control-phone sppb-addon-title-icon"></span> +38 (098) 685-29-40
+                                                  class="fa fa-volume-control-phone sppb-addon-title-icon"></span> <?php the_field( 'main_phone_pretty', 'option' ); ?>
                                                 </h3>
                                               </a>
                                             </div>
@@ -182,11 +149,11 @@
                                           <div id="sppb-addon-15958617563882"
                                                class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <a href="tel:+380986903201">
+                                              <a href="tel:<?php the_field( 'second_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
                                                 <span
                                                   class="fa fa-volume-control-phone sppb-addon-title-icon"></span>
-                                                  +38 (098) 690-32-01
+                                                  <?php the_field( 'second_phone_pretty', 'option' ); ?>
                                                 </h3>
                                               </a>
                                             </div>
@@ -324,7 +291,7 @@
                                           </div>
                                           <div id="sppb-addon-1603705666917" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <a href="tel:+380986852940">
+                                              <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
                                                   <span class="fa fa-volume-control-phone sppb-addon-title-icon"></span> +38(098) 685-29-40
                                                 </h3>
@@ -334,7 +301,7 @@
                                           <div id="sppb-addon-16037056669172" class=" sppb-wow zoomIn clearfix
                                         sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <a href="tel:+380986903201">
+                                              <a href="tel:<?php the_field( 'second_phone', 'option' ); ?>">
                                                 <h3 class="sppb-addon-title">
                                                 <span class="fa fa-volume-control-phone
                                                 sppb-addon-title-icon"></span> +38(098) 690-32-01
@@ -359,7 +326,7 @@
                                             <div class="sppb-addon sppb-addon-module ">
                                               <div class="sppb-addon-content">
                                                 <div class="custom">
-                                                  <a href="tel:+380986852940" class="button-red-action">
+                                                  <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>" class="button-red-action">
                                                     Викликати
                                                   </a>
                                                 </div>

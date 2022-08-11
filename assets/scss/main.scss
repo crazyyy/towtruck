@@ -1,7 +1,17 @@
+@import "sppagebuilder";
+@import "sppagecontainer";
+@import "magnific-popup";
+@import "form";
+@import "content";
+@import "jcemediabox";
+//@import "widgetkit";
+@import "template";
+@import "default";
+
 .sp-page-builder .page-content {
   #section-id-1595755039101, #section-id-1603185531988 {
     background-attachment: scroll;
-    background-image: url(../img/fon5_pomosh.jpg);
+    background-image: url(../img/hero-header.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +22,7 @@
 
 #sppb-addon-1602926758379, #sppb-addon-1603185532001 {
   background-attachment: inherit;
-  background-image: url(../img/banerfon.jpg);
+  background-image: url(../img/yellow-string.jpg);
   background-size: contain;
   box-shadow: 8px 10px 13px 0 #fff;
   overflow: hidden;
@@ -66,6 +76,12 @@
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+#uslugi1 {
+  .services-container {
+    padding-top: 20px;
   }
 }
 
@@ -331,7 +347,7 @@
 
   #section-id-1595776894324, #vyzvat1 {
     background-attachment: fixed;
-    background-image: url(../img/anypics.jpg);
+    background-image: url(../img/dark-background.jpg);
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -387,13 +403,22 @@
 
 #sppb-addon-1603365285203, #sppb-addon-1603365285208, #sppb-addon-1603365853918 {
   box-shadow: 0 0 0 0 #fff;
-  margin: 0 0px0px;
+  margin: 0 0px 0px;
   padding: 10px;
 }
 
+.inner-content--title {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.services-content--title {
+  padding: 40px 0 20px;
+}
+
 #sppb-addon-1603365285203 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/zapusk2.jpg);
     color: #fff;
   }
 
@@ -542,14 +567,12 @@
 
 #sppb-addon-1603365285208 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/zamenakolesa1.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1603365853918 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/diagnostika1.jpg);
     color: #fff;
   }
 }
@@ -562,63 +585,54 @@
 
 #sppb-addon-1603378650876 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/vskrytie.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1603378650878 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/podvoztopliva.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1603378650880 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/remontavto.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488428 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/akb1.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488431 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/signal.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488434 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/otogrev.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488440 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/sekretki.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488443 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/zamok1.jpg);
     color: #fff;
   }
 }
 
 #sppb-addon-1607532488446 {
   .sppb-flipbox-front, .threeD-flip-front {
-    background-image: url(../img/kluchi.jpg);
     color: #fff;
   }
 }

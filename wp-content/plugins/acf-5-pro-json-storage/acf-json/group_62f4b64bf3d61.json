@@ -38,6 +38,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_62f4cfb92b86f",
+            "label": "Services Description Title",
+            "name": "services_description_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62f4b90b40910",
             "label": "Services Description",
             "name": "services_description",
@@ -82,14 +101,49 @@
                 "acfe_bidirectional_enabled": "0"
             },
             "ui": 1
+        },
+        {
+            "key": "field_62f4d2b3ad022",
+            "label": "Other",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62f4d2c6ad023",
+            "label": "Primary Title",
+            "name": "primary_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_template",
                 "operator": "==",
-                "value": "front-page.old.php"
+                "value": "front-page.php"
             }
         ]
     ],
@@ -110,5 +164,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660205533
+    "modified": 1660211960
 }

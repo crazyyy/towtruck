@@ -14,30 +14,24 @@ function wpeAdminThemeStyle() {
   wp_enqueue_script( 'wpe-editor-script' );
 }
 
-//  Catch first image from post and display it
-function catchFirstImage() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i',
-    $post->post_content, $matches);
-  $first_img = $matches [1] [0];
-  if(empty($first_img)){
-    $first_img = get_template_directory_uri() . '/img/noimage.png'; }
-    return $first_img;
-}
-
 add_action('acf/init', 'my_acf_init');
 function my_acf_init() {
   acf_update_setting('google_api_key', 'AIzaSyCZF31krTQH_5QnEpdIsEgmsBV-Iy884rE');
 }
 
-
 add_action('wp_enqueue_scripts', 'wpeStyles'); // Add Theme Stylesheet
 function wpeStyles()  {
   wp_dequeue_style('fancybox');
   wp_dequeue_style('wp_dequeue_style');
+
+  wp_register_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all');
+  wp_enqueue_style('font-awesome');
+
+  wp_register_style('animate.css', '//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
+  wp_enqueue_style('animate.css');
+
+  wp_register_style('bootstrap', '//cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css', array(), '4.6.2', 'all');
+  wp_enqueue_style('bootstrap'); // Enqueue it!
 
   wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
@@ -50,8 +44,35 @@ function wpeHeaderScripts() {
   wp_deregister_script('modernizr');
   wp_deregister_script( 'jquery-form' );
 
-  wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), '3.4.1');
+  wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0');
   wp_enqueue_script('jquery');
+
+  wp_register_script('jquery-migrate', '//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js', array(), '3.4.0');
+  wp_enqueue_script('jquery-migrate');
+
+  wp_register_script('parallax', get_template_directory_uri() . '/js/jquery.parallax.js', array(), '1.1.1', true);
+  wp_enqueue_script('parallax');
+
+  wp_register_script('sppagebuilder', get_template_directory_uri() . '/js/sppagebuilder.js', array(), '1.1.1', true);
+  wp_enqueue_script('sppagebuilder');
+
+  wp_register_script('magnific-popup', '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), '1.1.0', true);
+  wp_enqueue_script('magnific-popup');
+
+  wp_register_script('popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js', array(), '2.11.5', true);
+  wp_enqueue_script('popper');
+
+  wp_register_script('bootstrap', '//cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js', array(), '4.6.2', true);
+  wp_enqueue_script('bootstrap');
+
+  wp_register_script('main', get_template_directory_uri() . '/js/main.js', array(), '2.2.2', true);
+  wp_enqueue_script('main');
+
+  wp_register_script('core', get_template_directory_uri() . '/js/core.js', array(), '3.3.3', true);
+  wp_enqueue_script('core');
+
+  wp_register_script('jquery.smooth-scroll', '//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js', array(), '2.2.0', true);
+  wp_enqueue_script('jquery.smooth-scroll');
 
   //  Load footer scripts (footer.php)
   wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
@@ -60,16 +81,6 @@ function wpeHeaderScripts() {
     'ajaxurl' => admin_url( 'admin-ajax.php' ),
     'templatePath' => get_template_directory_uri(),
     'posts_per_page' => get_option('posts_per_page')
-  ));
-}
-
-//  Remove wp_head() injected Recent Comment styles
-//  add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
-function my_remove_recent_comments_style() {
-  global $wp_widget_factory;
-  remove_action('wp_head', array(
-    $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
-    'recent_comments_style'
   ));
 }
 
@@ -145,35 +156,11 @@ function wpeFootNav() {
     )
   );
 }
-// WPE sidebar navigation
-function wpeSideNav() {
-  wp_nav_menu(
-  array(
-    'theme_location'  => 'sidebar-menu',
-    'menu'            => '',
-    'container'       => 'div',
-    'container_class' => 'menu-{menu slug}-container',
-    'container_id'    => '',
-    'menu_class'      => 'menu',
-    'menu_id'         => '',
-    'echo'            => true,
-    'fallback_cb'     => 'wp_page_menu',
-    'before'          => '',
-    'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
-    'depth'           => 0,
-    'walker'          => ''
-    )
-  );
-}
 //  Register WPE Navigation
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 function register_html5_menu() {
   register_nav_menus(array(
     'header-menu' => __('Header Nav', 'wpeasy'),
-    'sidebar-menu' => __('Sidebar Nav', 'wpeasy'),
     'footer-menu' => __('Footer Nav', 'wpeasy')
   ));
 }
@@ -189,18 +176,6 @@ if (function_exists('register_sidebar')) {
     'before_title' => '<h6>',
     'after_title' => '</h6>'
   ));
-  //  Define Sidebar Widget Area 2. If your want to display more widget - uncoment this
-  /*
-  register_sidebar(array(
-    'name' => __('Widgets area #2', 'wpeasy'),
-    'description' => __('Description for this widget-area...', 'wpeasy'),
-    'id' => 'widgetarea2',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
-  ));
-  */
 }
 
 //  Custom Excerpts
@@ -231,15 +206,6 @@ function wpeExcerpt($length_callback = '', $more_callback = '') {
   echo $output;
 }
 
-//  Custom View Article link to Post
-//  RU: Добавляем "Читать дальше" к обрезанным записям
-/*
-function html5_blank_view_article($more) {
-  global $post;
-  return '... <!-- noindex --><a rel="nofollow" class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'wpeasy') . '</a><!-- /noindex -->';
-}
-add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-*/
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
 function my_wp_nav_menu_args($args = '') {

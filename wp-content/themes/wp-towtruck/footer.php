@@ -28,11 +28,10 @@
                                       <div class="sppb-column-addons">
                                         <div id="sppb-addon-1603705651744" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                           <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                            <a href="tel:+380986852940">
+                                            <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
                                               <h2 class="sppb-addon-title">
-                                                            <span
-                                                              class="fa fa-volume-control-phone sppb-addon-title-icon"></span>
-                                                +38 (098) 685-29-40
+                                                <span class="fa fa-volume-control-phone sppb-addon-title-icon"></span>
+                                                <?php the_field( 'main_phone_pretty', 'option' ); ?>
                                               </h2>
                                             </a>
                                           </div>
@@ -40,11 +39,10 @@
                                         <div id="sppb-addon-16037056517424"
                                              class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                           <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                            <a href="tel:+380986903201">
+                                            <a href="tel:<?php the_field( 'second_phone', 'option' ); ?>">
                                               <h2 class="sppb-addon-title">
-                                                            <span
-                                                              class="fa fa-volume-control-phone sppb-addon-title-icon"></span>
-                                                +38 (098) 690-32-01
+                                                <span class="fa fa-volume-control-phone  sppb-addon-title-icon"></span>
+                                                <?php the_field( 'second_phone_pretty', 'option' ); ?>
                                               </h2>
                                             </a>
                                           </div>
