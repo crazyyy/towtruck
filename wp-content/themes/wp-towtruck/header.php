@@ -81,22 +81,13 @@
                                                 <span class="sppb-responsive-bar"></span>
                                                 <span class="sppb-responsive-bar"></span>
                                               </div>
-                                              <ul>
-                                                <li class="">
-                                                  <a href="#uslugi1" data-scroll-to="true">ПОСЛУГИ</a>
-                                                </li>
-                                                <li class="sppb-active">
-                                                  <a href="#pochemu1" data-scroll-to="true">ЧОМУ МИ</a>
-                                                </li>
-                                                <li class="">
-                                                  <a href="#vyzvat1" data-scroll-to="true">ВИКЛИКАТИ ДОПОМОГУ</a>
-                                                </li>
-                                              </ul>
+                                              <?php wpeHeadNav(); ?>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185562485" class=" sppb-wow flipInX clearfix sppb-animated" data-sppb-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: flipInX;">
                                             <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                              <h2 class="sppb-addon-title">РІШЕННЯ ВАШИХ ПРОБЛЕМ НАШЕ ЗАВДАННЯ</h2>
+                                              <h2 class="sppb-addon-title">Потрібно евакуювати з дороги?
+                                                <br>Зателефонуйте нам:</h2>
                                             </div>
                                           </div>
                                         </div>
@@ -266,17 +257,7 @@
                                                 <span class="sppb-responsive-bar"></span>
                                                 <span class="sppb-responsive-bar"></span>
                                               </div>
-                                              <ul>
-                                                <li class="">
-                                                  <a href="#uslugi1" data-scroll-to="true">ПОСЛУГИ</a>
-                                                </li>
-                                                <li class="">
-                                                  <a href="#pochemu1" data-scroll-to="true">ЧОМУ МИ</a>
-                                                </li>
-                                                <li class="">
-                                                  <a href="#vyzvat1" data-scroll-to="true">ВИКЛИКАТИ ДОПОМОГУ</a>
-                                                </li>
-                                              </ul>
+                                              <?php wpeHeadNav(); ?>
                                             </div>
                                           </div>
                                           <div id="sppb-addon-1603185531992" class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">

@@ -45,6 +45,7 @@ https://www.cssportal.com/scss-to-css/
 https://clean-css.github.io/
 https://www.cssportal.com/css-optimize/
 https://css2sass.herokuapp.com/
+https://minimalcss.app/
 
 ### Gradients
   * @include linear-gradient(yellow, blue);
