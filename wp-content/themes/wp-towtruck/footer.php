@@ -84,7 +84,7 @@
 </div>
 
 <!-- Go to top -->
-<a href="#" class="sp-scroll-up" aria-label="Scroll Up" style="display: block;">
+<a href="#" class="sp-scroll-up" aria-label="Scroll Up">
   <span class="fa fa-chevron-up" aria-hidden="true"></span>
 </a>
 

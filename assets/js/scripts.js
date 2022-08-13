@@ -46,5 +46,55 @@ if ( typeof jQuery === 'undefined' ) {
   console.log( `jQuery ${jQuery.fn.jquery} has loaded` );
 }
 // Place any jQuery/helper plugins in here.
-console.log( 'Hello!' );
+jQuery( ( $ ) => {
+  // Stikcy Header
+  if ( $( 'body' ).hasClass( 'sticky-header' ) ) {
+    const header = $( '#sp-header' );
 
+    if ( $( 'body' ).hasClass( 'layout-boxed' ) ) {
+      const windowWidth = header.parent().outerWidth();
+
+      header.css( {
+        'max-width': windowWidth,
+        'left': 'auto'
+      } );
+    }
+  }
+
+  // go to top
+  $( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 100 ) {
+      $( '.sp-scroll-up' ).fadeIn();
+    } else {
+      $( '.sp-scroll-up' ).fadeOut( 400 );
+    }
+  } );
+
+  $( '.sp-scroll-up' ).click( () => {
+    $( 'html, body' ).animate( {
+      scrollTop: 0
+    }, 600 );
+
+    return false;
+  } );
+} );
+
+jQuery( ( $ ) => {
+  ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i ).test( navigator.userAgent ) ? ( $( '.sppb-addon-sppb-flibox .sppb-flipbox-panel, .threeD-flipbox .threeD-content-wrap' ).on( 'mouseover', function( e ) {
+    $( this ).toggleClass( 'flip' );
+  } ),
+  $( document ).on( 'mouseenter', '.sppb-addon-sppb-flibox .sppb-flipbox-panel, .threeD-flipbox .threeD-content-wrap', function( e ) {
+    $( this ).addClass( 'flip' );
+  } ),
+  $( document ).on( 'mouseleave', '.sppb-addon-sppb-flibox .sppb-flipbox-panel, .threeD-flipbox .threeD-content-wrap', function( e ) {
+    $( this ).removeClass( 'flip' );
+  } ) ) : ( $( document ).on( 'click', '.sppb-addon-sppb-flibox.flipon-click .sppb-flipbox-panel, .threeD-flipbox.flipon-click .threeD-content-wrap', function( e ) {
+    $( this ).toggleClass( 'flip' );
+  } ),
+  $( document ).on( 'mouseenter', '.sppb-addon-sppb-flibox.flipon-hover .sppb-flipbox-panel, .threeD-flipbox.flipon-hover .threeD-content-wrap', function() {
+    $( this ).addClass( 'flip' );
+  } ),
+  $( document ).on( 'mouseleave', '.sppb-addon-sppb-flibox.flipon-hover .sppb-flipbox-panel, .threeD-flipbox.flipon-hover .threeD-content-wrap', function() {
+    $( this ).removeClass( 'flip' );
+  } ) );
+} );
