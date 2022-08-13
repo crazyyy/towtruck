@@ -4,10 +4,10 @@
     <div class="sppb-row-container ">
       <div class="sppb-row">
 
-        <div class="sppb-col-md-12" id="column-wrap-id-1595756312707">
-          <div id="column-id-1595756312707" class="sppb-column">
+        <div class="sppb-col-md-12">
+          <div class="sppb-column sppb-column--col">
             <div class="sppb-column-addons">
-              <div id="section-id-1595773731858" class="sppb-section ">
+              <div class="sppb-section sppb-section--shad">
                 <div class="sppb-container-inner sppb-section-content-center">
 
                   <h2 class="inner-content--title services-content--title"><?php the_field( 'services_title' );
@@ -20,9 +20,11 @@
                       <?php foreach ( $services_list as $post ) :  ?>
                         <?php setup_postdata( $post ); ?>
                         <div class="sppb-col-md-4">
-                          <div id="column-id-1595773731859" class="sppb-column">
+                          <div class="sppb-column sppb-column--shad">
                             <div class="sppb-column-addons">
-                              <div id="sppb-addon-1603365285203" class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
+                              <div class="sppb-wow zoomIn clearfix sppb-animated services-container--item"
+                                   data-sppb-wow-duration="800ms"
+                                   style="visibility: visible; animation-duration: 800ms; animation-name: zoomIn;">
                                 <div class="sppb-addon sppb-addon-sppb-flibox  threeD-flipbox flip_right flipon-hover sppb-text-center">
                                   <div class="threeD-content-wrap">
                                     <div class="threeD-item">
@@ -41,7 +43,8 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1100ms"
+                              <div class="sppb-wow bounceIn clearfix sppb-animated sppb-button-container"
+                                   data-sppb-wow-duration="1100ms"
                                    style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
                                 <div class="sppb-addon sppb-addon-module">
                                   <div class="sppb-addon-content">
@@ -76,7 +79,7 @@
   </section>
 
 
-  <section id="section-id-1595776894324" class="sppb-section " data-sppb-parallax="on" style="background-attachment: fixed; background-position: 50% -19px;">
+  <section id="section-id-1595776894324" class="sppb-section" data-sppb-parallax="on" style="background-attachment: fixed; background-position: 50% -19px;">
     <div class="sppb-row-overlay"></div>
     <div class="sppb-row-container ">
       <div class="sppb-shape-container sppb-top-shape ">
@@ -185,7 +188,7 @@
                     <div class="sppb-col-md-6" id="column-wrap-id-1603528047597">
                       <div id="column-id-1603528047597" class="sppb-column">
                         <div class="sppb-column-addons">
-                          <div class="sppb-wow bounceIn clearfix sppb-animated" data-sppb-wow-duration="1000ms"
+                          <div class="sppb-wow bounceIn clearfix sppb-animated sppb-button-container" data-sppb-wow-duration="1000ms"
                                style="visibility: visible; animation-duration: 1000ms; animation-name: bounceIn;">
                             <div class="sppb-addon sppb-addon-module">
                               <div class="sppb-addon-content">

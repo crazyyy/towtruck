@@ -7,43 +7,44 @@
                       </svg>
                     </div>
                     <div class="sppb-row">
-                      <div class="sppb-col-md-12" id="column-wrap-id-1595858740136">
-                        <div id="column-id-1595858740136" class="sppb-column">
+                      <div class="sppb-col-md-12">
+                        <div class="sppb-column">
                           <div class="sppb-column-addons">
-                            <div class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
+                            <div class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="1300ms" style="visibility: visible; animation-duration: 1300ms; animation-name: zoomIn;">
                               <div class="sppb-addon sppb-addon-header sppb-text-center">
-                                <h2 class="sppb-addon-title">НАШІ КОНТАКТИ</h2>
+                                <h4 class="sppb-addon-title sppb-addon-title--main">НАШІ КОНТАКТИ</h4>
                               </div>
                             </div>
-                            <div id="section-id-1595858740138" class="sppb-section ">
+                            <div class="sppb-section ">
                               <div class="sppb-container-inner sppb-section-content-center">
                                 <div class="sppb-row sppb-align-center">
-                                  <div class="sppb-col-md-3" id="column-wrap-id-1595858740139">
-                                    <div id="column-id-1595858740139" class="sppb-column">
-                                      <div class="sppb-column-addons"></div>
-                                    </div>
-                                  </div>
-                                  <div class="sppb-col-md-6" id="column-wrap-id-1595858740141">
-                                    <div id="column-id-1595858740141" class="sppb-column">
+                                   <div class="sppb-col-md-6">
+                                    <div class="sppb-column">
                                       <div class="sppb-column-addons">
-                                        <div id="sppb-addon-1603705651744" class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
+                                        <div class="sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                           <div class="sppb-addon sppb-addon-header sppb-text-center">
                                             <a href="tel:<?php the_field( 'main_phone', 'option' ); ?>">
-                                              <h2 class="sppb-addon-title">
+                                              <h5 class="sppb-addon-title sppb-addon-title--phone">
                                                 <span class="fa fa-volume-control-phone sppb-addon-title-icon"></span>
                                                 <?php the_field( 'main_phone_pretty', 'option' ); ?>
-                                              </h2>
+                                              </h5>
                                             </a>
                                           </div>
                                         </div>
-                                        <div id="sppb-addon-16037056517424"
-                                             class=" sppb-wow zoomIn clearfix sppb-animated" data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="sppb-col-md-6">
+                                    <div class="sppb-column">
+                                      <div class="sppb-column-addons">
+                                        <div class="sppb-wow zoomIn clearfix sppb-animated"
+                                             data-sppb-wow-duration="2300ms" style="visibility: visible; animation-duration: 2300ms; animation-name: zoomIn;">
                                           <div class="sppb-addon sppb-addon-header sppb-text-center">
                                             <a href="tel:<?php the_field( 'second_phone', 'option' ); ?>">
-                                              <h2 class="sppb-addon-title">
+                                              <h5 class="sppb-addon-title sppb-addon-title--phone">
                                                 <span class="fa fa-volume-control-phone  sppb-addon-title-icon"></span>
                                                 <?php the_field( 'second_phone_pretty', 'option' ); ?>
-                                              </h2>
+                                              </h5>
                                             </a>
                                           </div>
                                         </div>

@@ -19,6 +19,29 @@
   position: relative;
   will-change: top;
 }
+.sppb-section--header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .sppb-addon-title--phone {
+    font-size: 36px;
+    color: #fff;
+    box-shadow: 0 0 0 0 #fff;
+    &:hover {
+      color: #efda29;
+    }
+  }
+}
+
+.sppb-section--post {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-attachment: fixed;
+  background-position: 50% 23px;
+  .sppb-addon-content {
+    color: #000;
+  }
+}
+
 #sp-page-builder .page-content .sppb-section:first-child {
   margin-top: 0;
 }
@@ -563,7 +586,7 @@ body {
 .sp-page-builder .page-content #section-id-1595755039101,
 .sp-page-builder .page-content #section-id-1603185531988 {
   background-attachment: scroll;
-  background-image: url(/wp-content/themes/wp-towtruck/img/hero-header.jpg);
+  background-image: url(../img/hero-header.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -573,7 +596,7 @@ body {
 #sppb-addon-1602926758379,
 #sppb-addon-1603185532001 {
   background-attachment: inherit;
-  background-image: url(/wp-content/themes/wp-towtruck/img/yellow-string.jpg);
+  background-image: url(../img/yellow-string.jpg);
   background-size: contain;
   box-shadow: 8px 10px 13px 0 #fff;
   overflow: hidden;
@@ -610,8 +633,8 @@ body {
 }
 #column-id-1595755039100,
 #column-id-1595756312043,
-#column-id-1595756312707,
-#column-id-1595773731859,
+.sppb-column--col,
+.sppb-column--shad,
 #column-id-1595776894323,
 #column-id-1595776894338,
 #column-id-1595858740136,
@@ -631,8 +654,14 @@ body {
 #column-id-1603528047601 {
   box-shadow: 0 0 0 0 #fff;
 }
+.sppb-column--shad {
+  .sppb-button-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 .sp-page-builder .page-content #section-id-1595756312042,
-.sp-page-builder .page-content #section-id-1595773731858,
+.sp-page-builder .page-content .sppb-section--shad,
 .sp-page-builder .page-content #section-id-1595858740138,
 .sp-page-builder .page-content #section-id-1603528047593,
 .sp-page-builder .page-content #uslugi1 {
@@ -650,7 +679,7 @@ body {
   box-shadow: 0 0 0 0 #fff;
   margin: 0 0 30px;
 }
-#sppb-addon-1603365285203 .threeD-flip-back,
+.services-container--item .threeD-flip-back,
 #sppb-addon-1603443630414 a,
 #sppb-addon-1603528690952 a,
 .sppb-column--content {
@@ -796,7 +825,7 @@ body {
 .sp-page-builder .page-content #section-id-1595776894324,
 .sp-page-builder .page-content #vyzvat1 {
   background-attachment: fixed;
-  background-image: url(/wp-content/themes/wp-towtruck/img/dark-background.jpg);
+  background-image: url(../img/dark-background.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -837,7 +866,7 @@ body {
 #sppb-addon-1603185532008 .sppb-addon-title {
   font-weight: 600;
 }
-#sppb-addon-1603365285203 {
+.services-container--item {
   box-shadow: 0 0 0 0 #fff;
   margin: 0;
   padding: 10px;
@@ -850,13 +879,13 @@ body {
 .services-content--title {
   padding: 40px 0 20px;
 }
-#sppb-addon-1603365285203 .threeD-flip-front {
+.services-container--item .threeD-flip-front {
   color: #fff;
 }
-#sppb-addon-1603365285203 .threeD-flip-front:before {
+.services-container--item .threeD-flip-front:before {
   background-color: rgba(10, 1, 1, 0.34);
 }
-#sppb-addon-1603365285203 .threeD-flip-back:before {
+.services-container--item .threeD-flip-back:before {
   background-color: #2e3b3e;
 }
 .sp-page-builder .page-content #section-id-1595776894324 {
@@ -880,8 +909,15 @@ body {
   padding: 0;
   text-shadow: 2px 2px 1px #fff;
 }
-.sp-page-builder .page-content #vyzvat1 {
-  padding: 100px 0;
+#vyzvat1 {
+  padding: 50px 0;
+  .sppb-addon-title--main {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .sppb-addon-title--phone {
+    font-size: 36px;
+  }
 }
 .sp-page-builder .page-content #vyzvat1 > .sppb-row-overlay {
   background-color: rgba(6, 6, 6, 0.61);
@@ -915,7 +951,7 @@ body {
   #sppb-addon-1603185532007,
   #sppb-addon-1603185532008,
   #sppb-addon-1603185562485,
-  #sppb-addon-1603365285203,
+  .services-container--item,
   #sppb-addon-1603443630414,
   #sppb-addon-1603528690952,
   #sppb-addon-1603705651744,
@@ -955,7 +991,7 @@ body {
   #sppb-addon-1603185532007,
   #sppb-addon-1603185532008,
   #sppb-addon-1603185562485,
-  #sppb-addon-1603365285203,
+  .services-container--item,
   #sppb-addon-1603443630414,
   #sppb-addon-1603528690952,
   #sppb-addon-1603705651744,
