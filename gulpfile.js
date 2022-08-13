@@ -1,4 +1,4 @@
-
+'use strict';
 
 /* Set isHtmlDev to TRUE if work with html, else - FALSE */
 const isHtmlDev = false;
@@ -138,8 +138,10 @@ gulp.task( 'image:default', () => gulp
     imagemin.optipng( { optimizationLevel: 5 } ),
     imagemin.svgo( {
       plugins: [
+        { removeUnknownsAndDefaults: false },
         { removeViewBox: true },
-        { cleanupIDs: false }
+        { cleanupIDs: false },
+        { removeDimensions: true }
       ]
     } )
   ] ) )
@@ -353,6 +355,9 @@ function ChangeBasePath ( config ) {
 // https://github.com/adametry/gulp-eslint
 // https://www.npmjs.com/package/chalk
 // https://www.npmjs.com/search?q=gulp%20webfont
+// https://github.com/generaxion/axio-starter
+// https://github.com/generaxion/axio-starter/blob/master/assets/manifest.js
+// https://www.npmjs.com/package/gulp-babel
 
 // gulp-jshint https://github.com/generaxion/axio-starter/blob/master/package.json
 

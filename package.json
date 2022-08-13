@@ -72,11 +72,9 @@
     "gulp-typescript": "^5.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
-    "install": "^0.13.0",
     "lazypipe": "^1.0.2",
     "mkdirp": "^1.0.4",
     "mocha": "^10.0.0",
-    "npm": "^8.17.0",
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-discard-duplicates": "^5.1.0",
     "postcss-discard-empty": "^5.1.1",
@@ -132,7 +130,7 @@
     "unused": true
   },
   "main": "html/index.html",
-  "name": "wp-framework",
+  "name": "wp-truck",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crazyyy/wp-framework.git"
