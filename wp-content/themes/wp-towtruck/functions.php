@@ -53,6 +53,9 @@ function wpeHeaderScripts() {
   wp_register_script('parallax', get_template_directory_uri() . '/js/lib/jquery.parallax.js', array(), '1.1.1', true);
   wp_enqueue_script('parallax');
 
+  wp_register_script('sppagebuilder', get_template_directory_uri() . '/js/lib/sppagebuilder.js', array(), '1.1.1', true);
+  wp_enqueue_script('sppagebuilder');
+
   wp_register_script('magnific-popup', '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), '1.1.0', true);
   wp_enqueue_script('magnific-popup');
 
@@ -64,6 +67,9 @@ function wpeHeaderScripts() {
 
   wp_register_script('main', get_template_directory_uri() . '/js/lib/main.js', array(), '2.2.2', true);
   wp_enqueue_script('main');
+
+  wp_register_script('core', get_template_directory_uri() . '/js/lib/core.js', array(), '3.3.3', true);
+  wp_enqueue_script('core');
 
   wp_register_script('jquery.smooth-scroll', '//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js', array(), '2.2.0', true);
   wp_enqueue_script('jquery.smooth-scroll');

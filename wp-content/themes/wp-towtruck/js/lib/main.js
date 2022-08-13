@@ -1,2 +1,134 @@
-"use strict";jQuery(function(e){var a,n,t,s;e("body").hasClass("sticky-header")&&(a=e("#sp-header"),e("#sp-header").length&&(a.outerHeight(),n=a.offset().top,(t=function(){var t=e(window).scrollTop();n<t?a.addClass("header-sticky"):a.hasClass("header-sticky")&&a.removeClass("header-sticky")})(),e(window).scroll(function(){t()})),e("body").hasClass("layout-boxed")&&(s=a.parent().outerWidth(),a.css({"max-width":s,left:"auto"}))),e(window).scroll(function(){100<e(this).scrollTop()?e(".sp-scroll-up").fadeIn():e(".sp-scroll-up").fadeOut(400)}),e(".sp-scroll-up").click(function(){return e("html, body").animate({scrollTop:0},600),!1}),e(window).on("load",function(){e(".sp-preloader").fadeOut(500,function(){e(this).remove()})}),e(".sp-megamenu-wrapper").parent().parent().css("position","static").parent().css("position","relative"),e(".sp-menu-full").each(function(){e(this).parent().addClass("menu-justify")}),e("#offcanvas-toggler").on("click",function(t){t.preventDefault(),e(".offcanvas-init").addClass("offcanvas-active")}),e(".close-offcanvas, .offcanvas-overlay").on("click",function(t){t.preventDefault(),e(".offcanvas-init").removeClass("offcanvas-active")}),e(document).on("click",".offcanvas-inner .menu-toggler",function(t){t.preventDefault(),e(this).closest(".menu-parent").toggleClass("menu-parent-open").find(">.menu-child").slideToggle(400)}),e('[data-toggle="tooltip"]').tooltip(),e(".article-ratings .rating-star").on("click",function(t){t.preventDefault();var n=e(this).closest(".article-ratings"),t={option:"com_ajax",template:template,action:"rating",rating:e(this).data("number"),article_id:n.data("id"),format:"json"};e.ajax({type:"POST",data:t,beforeSend:function(){n.find(".fa-spinner").show()},success:function(t){var a=e.parseJSON(t);n.find(".ratings-count").text(a.message),n.find(".fa-spinner").hide(),a.status&&n.find(".rating-symbol").html(a.ratings),setTimeout(function(){n.find(".ratings-count").text("(".concat(a.rating_count,")"))},3e3)}})})});
-//# sourceMappingURL=../maps/lib/main.js.map
+/**
+ * @package Helix Ultimate Framework
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2018 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+*/
+jQuery( ( $ ) => {
+  // Stikcy Header
+  if ( $( 'body' ).hasClass( 'sticky-header' ) ) {
+    const header = $( '#sp-header' );
+
+    if ( $( '#sp-header' ).length ) {
+      const headerHeight = header.outerHeight();
+      const stickyHeaderTop = header.offset().top;
+      const stickyHeader = function() {
+        const scrollTop = $( window ).scrollTop();
+
+        if ( scrollTop > stickyHeaderTop ) {
+          header.addClass( 'header-sticky' );
+        } else if ( header.hasClass( 'header-sticky' ) ) {
+          header.removeClass( 'header-sticky' );
+        }
+      };
+
+      stickyHeader();
+      $( window ).scroll( () => {
+        stickyHeader();
+      } );
+    }
+
+    if ( $( 'body' ).hasClass( 'layout-boxed' ) ) {
+      const windowWidth = header.parent().outerWidth();
+
+      header.css( {
+        'max-width': windowWidth,
+        'left': 'auto'
+      } );
+    }
+  }
+
+  // go to top
+  $( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 100 ) {
+      $( '.sp-scroll-up' ).fadeIn();
+    } else {
+      $( '.sp-scroll-up' ).fadeOut( 400 );
+    }
+  } );
+
+  $( '.sp-scroll-up' ).click( () => {
+    $( 'html, body' ).animate( {
+      scrollTop: 0
+    }, 600 );
+
+    return false;
+  } );
+
+  // Preloader
+  $( window ).on( 'load', () => {
+    $( '.sp-preloader' ).fadeOut( 500, function() {
+      $( this ).remove();
+    } );
+  } );
+
+  //mega menu
+  $( '.sp-megamenu-wrapper' ).parent()
+    .parent()
+    .css( 'position', 'static' )
+    .parent()
+    .css( 'position', 'relative' );
+  $( '.sp-menu-full' ).each( function() {
+    $( this ).parent()
+      .addClass( 'menu-justify' );
+  } );
+
+  // Offcanvs
+  $( '#offcanvas-toggler' ).on( 'click', ( event ) => {
+    event.preventDefault();
+    $( '.offcanvas-init' ).addClass( 'offcanvas-active' );
+  } );
+
+  $( '.close-offcanvas, .offcanvas-overlay' ).on( 'click', ( event ) => {
+    event.preventDefault();
+    $( '.offcanvas-init' ).removeClass( 'offcanvas-active' );
+  } );
+
+  $( document ).on( 'click', '.offcanvas-inner .menu-toggler', function( event ) {
+    event.preventDefault();
+    $( this ).closest( '.menu-parent' )
+      .toggleClass( 'menu-parent-open' )
+      .find( '>.menu-child' )
+      .slideToggle( 400 );
+  } );
+
+  //Tooltip
+  $( '[data-toggle="tooltip"]' ).tooltip();
+
+  // Article Ajax voting
+  $( '.article-ratings .rating-star' ).on( 'click', function( event ) {
+    event.preventDefault();
+    const $parent = $( this ).closest( '.article-ratings' );
+
+    const request = {
+      'option': 'com_ajax',
+      template,
+      'action': 'rating',
+      'rating': $( this ).data( 'number' ),
+      'article_id': $parent.data( 'id' ),
+      'format': 'json'
+    };
+
+    $.ajax( {
+      type: 'POST',
+      data: request,
+      beforeSend () {
+        $parent.find( '.fa-spinner' ).show();
+      },
+      success ( response ) {
+        const data = $.parseJSON( response );
+
+        $parent.find( '.ratings-count' ).text( data.message );
+        $parent.find( '.fa-spinner' ).hide();
+
+        if ( data.status ) {
+          $parent.find( '.rating-symbol' ).html( data.ratings );
+        }
+
+        setTimeout( () => {
+          $parent.find( '.ratings-count' ).text( `(${data.rating_count})` );
+        }, 3000 );
+      }
+    } );
+  } );
+} );
