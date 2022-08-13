@@ -228,11 +228,11 @@ const jsConcat = lazypipe()
 
 gulp.task( 'scripts', () => gulp.src( config.path.scripts.src )
   .pipe( customErrorPlumber( 'Error Running Scripts' ) )
-  .pipe( plugin.newer( config.path.scripts.dest ) )
+  .pipe( plugin.changed( config.path.scripts.dest ) )
   .pipe( customErrorPlumber( 'Error Compiling Scripts' ) )
   .pipe( plugin.if( isDev, plugin.sourcemaps.init() ) )
   .pipe( plugin.babel( {
-    presets: [ 'env' ]
+    presets: [ '@babel/preset-env' ]
   } ) )
   .pipe( plugin.if( [ 'scripts.js' /*,'scripts2.js'*/], jsConcat() ) )
   .pipe( plugin.if( '*.js', plugin.uglify() ) )
@@ -353,6 +353,8 @@ function ChangeBasePath ( config ) {
 // https://github.com/adametry/gulp-eslint
 // https://www.npmjs.com/package/chalk
 // https://www.npmjs.com/search?q=gulp%20webfont
+
+// gulp-jshint https://github.com/generaxion/axio-starter/blob/master/package.json
 
 // .pipe(plugins.notify("Hello Gulp!"))
 // .pipe(plugins.notify("Found file: <%= file.relative %>!"))
