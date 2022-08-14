@@ -210,6 +210,56 @@ CREATE TABLE IF NOT EXISTS `hadpj_blc_filters` (
 -- Dumping data for table towtruck.hadpj_blc_filters: ~0 rows (приблизно)
 DELETE FROM `hadpj_blc_filters`;
 
+-- Dumping structure for вид towtruck.hadpj_blc_instances
+-- Creating temporary table to overcome VIEW dependency errors
+CREATE TABLE `hadpj_blc_instances` (
+	`instance_id` INT(10) UNSIGNED NOT NULL,
+	`link_id` INT(10) UNSIGNED NOT NULL,
+	`container_id` INT(10) UNSIGNED NOT NULL,
+	`container_type` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`link_text` TEXT NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`parser_type` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`container_field` VARCHAR(250) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`link_context` VARCHAR(250) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`raw_url` TEXT NOT NULL COLLATE 'utf8mb4_unicode_520_ci'
+) ENGINE=MyISAM;
+
+-- Dumping structure for вид towtruck.hadpj_blc_links
+-- Creating temporary table to overcome VIEW dependency errors
+CREATE TABLE `hadpj_blc_links` (
+	`link_id` INT(20) UNSIGNED NOT NULL,
+	`url` TEXT NOT NULL COLLATE 'utf8mb3_bin',
+	`first_failure` DATETIME NOT NULL,
+	`last_check` DATETIME NOT NULL,
+	`last_success` DATETIME NOT NULL,
+	`last_check_attempt` DATETIME NOT NULL,
+	`check_count` INT(4) UNSIGNED NOT NULL,
+	`final_url` TEXT NOT NULL COLLATE 'latin1_general_cs',
+	`redirect_count` SMALLINT(5) UNSIGNED NOT NULL,
+	`log` TEXT NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`http_code` SMALLINT(6) NOT NULL,
+	`status_code` VARCHAR(100) NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`status_text` VARCHAR(250) NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`request_duration` FLOAT NOT NULL,
+	`timeout` TINYINT(1) UNSIGNED NOT NULL,
+	`broken` TINYINT(1) UNSIGNED NOT NULL,
+	`warning` TINYINT(1) UNSIGNED NOT NULL,
+	`may_recheck` TINYINT(1) NOT NULL,
+	`being_checked` TINYINT(1) NOT NULL,
+	`result_hash` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`false_positive` TINYINT(1) NOT NULL,
+	`dismissed` TINYINT(1) NOT NULL
+) ENGINE=MyISAM;
+
+-- Dumping structure for вид towtruck.hadpj_blc_synch
+-- Creating temporary table to overcome VIEW dependency errors
+CREATE TABLE `hadpj_blc_synch` (
+	`container_id` INT(20) UNSIGNED NOT NULL,
+	`container_type` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+	`synched` TINYINT(2) UNSIGNED NOT NULL,
+	`last_synch` DATETIME NOT NULL
+) ENGINE=MyISAM;
+
 -- Dumping structure for таблиця towtruck.hadpj_commentmeta
 CREATE TABLE IF NOT EXISTS `hadpj_commentmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -1114,6 +1164,16 @@ CREATE TABLE IF NOT EXISTS `hadpj_rank_math_internal_meta` (
 -- Dumping data for table towtruck.hadpj_rank_math_internal_meta: ~0 rows (приблизно)
 DELETE FROM `hadpj_rank_math_internal_meta`;
 
+-- Dumping structure for вид towtruck.hadpj_revisr
+-- Creating temporary table to overcome VIEW dependency errors
+CREATE TABLE `hadpj_revisr` (
+	`id` MEDIUMINT(9) NOT NULL,
+	`time` DATETIME NOT NULL,
+	`message` TEXT NULL COLLATE 'utf8mb3_general_ci',
+	`event` VARCHAR(42) NOT NULL COLLATE 'utf8mb3_general_ci',
+	`user` VARCHAR(60) NULL COLLATE 'utf8mb3_general_ci'
+) ENGINE=MyISAM;
+
 -- Dumping structure for таблиця towtruck.hadpj_termmeta
 CREATE TABLE IF NOT EXISTS `hadpj_termmeta` (
   `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -1140,7 +1200,7 @@ CREATE TABLE IF NOT EXISTS `hadpj_terms` (
   KEY `name` (`name`(191))
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table towtruck.hadpj_terms: ~3 rows (приблизно)
+-- Dumping data for table towtruck.hadpj_terms: ~2 rows (приблизно)
 DELETE FROM `hadpj_terms`;
 INSERT INTO `hadpj_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 	(1, 'Без рубрики', 'uncategories', 0),
@@ -1172,7 +1232,7 @@ CREATE TABLE IF NOT EXISTS `hadpj_term_taxonomy` (
   KEY `taxonomy` (`taxonomy`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table towtruck.hadpj_term_taxonomy: ~3 rows (приблизно)
+-- Dumping data for table towtruck.hadpj_term_taxonomy: ~2 rows (приблизно)
 DELETE FROM `hadpj_term_taxonomy`;
 INSERT INTO `hadpj_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 	(1, 1, 'category', '', 0, 0),
@@ -1223,7 +1283,7 @@ CREATE TABLE IF NOT EXISTS `hadpj_usermeta` (
   KEY `meta_value` (`meta_value`(32),`umeta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table towtruck.hadpj_usermeta: ~108 rows (приблизно)
+-- Dumping data for table towtruck.hadpj_usermeta: ~91 rows (приблизно)
 DELETE FROM `hadpj_usermeta`;
 INSERT INTO `hadpj_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
 	(109, 2, '_wplv_settings', 'a:7:{s:4:"view";s:5:"group";s:4:"sort";s:6:"newest";s:5:"query";s:0:"";s:7:"legends";s:0:"";s:12:"fold_sidebar";i:1;s:17:"truncate_download";i:1;s:13:"custom_errors";s:0:"";}'),
@@ -1354,7 +1414,7 @@ CREATE TABLE IF NOT EXISTS `hadpj_users` (
   KEY `display_name` (`display_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table towtruck.hadpj_users: ~4 rows (приблизно)
+-- Dumping data for table towtruck.hadpj_users: ~3 rows (приблизно)
 DELETE FROM `hadpj_users`;
 INSERT INTO `hadpj_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 	(2, 'aparserok', '$P$BeL/j3OEH14GcLKpifdYj.WxBtvxde/', 'aparserok', 'aparserok@gmail.com', '', '2013-11-06 22:37:02', '', 0, 'aparserok'),
@@ -1388,7 +1448,7 @@ CREATE TABLE IF NOT EXISTS `hadpj_wpml_mails` (
   PRIMARY KEY (`mail_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table towtruck.hadpj_wpml_mails: ~4 rows (приблизно)
+-- Dumping data for table towtruck.hadpj_wpml_mails: ~2 rows (приблизно)
 DELETE FROM `hadpj_wpml_mails`;
 INSERT INTO `hadpj_wpml_mails` (`mail_id`, `timestamp`, `host`, `receiver`, `subject`, `message`, `headers`, `attachments`, `error`, `plugin_version`) VALUES
 	(1, '2022-08-14 00:08:32', '127.0.0.1', 'info@towtruck.local', '[Евакуатор Сквира дешево та швидко. Викликати евакуатор недорого.] Реєстрація нового користувача', 'Зареєстрований новий користувач на вашому сайті Евакуатор Сквира дешево та швидко. Викликати евакуатор недорого.:\r\n\r\nІм’я користувача: vadimgordienko\r\n\r\nEmail: vadimgordienko777@gmail.com\r\n', '', '', NULL, '1.10.4'),
@@ -1422,6 +1482,26 @@ CREATE TABLE IF NOT EXISTS `hadpj_yoast_seo_meta` (
 DELETE FROM `hadpj_yoast_seo_meta`;
 INSERT INTO `hadpj_yoast_seo_meta` (`object_id`, `internal_link_count`, `incoming_link_count`) VALUES
 	(35, 0, 0);
+
+-- Dumping structure for вид towtruck.hadpj_blc_instances
+-- Removing temporary table and create final VIEW structure
+DROP TABLE IF EXISTS `hadpj_blc_instances`;
+;
+
+-- Dumping structure for вид towtruck.hadpj_blc_links
+-- Removing temporary table and create final VIEW structure
+DROP TABLE IF EXISTS `hadpj_blc_links`;
+;
+
+-- Dumping structure for вид towtruck.hadpj_blc_synch
+-- Removing temporary table and create final VIEW structure
+DROP TABLE IF EXISTS `hadpj_blc_synch`;
+;
+
+-- Dumping structure for вид towtruck.hadpj_revisr
+-- Removing temporary table and create final VIEW structure
+DROP TABLE IF EXISTS `hadpj_revisr`;
+;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
