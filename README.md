@@ -1,14 +1,41 @@
-# WP Easy Start Framework
-```
-npm i
-npm run start
-```
+# TowTruck
 
+## Pages
+### Tarifs
+https://evakuator.team/эвакуатор-цены
+https://evakmoscow.ru/tseny/
+https://www.evacuator-moskva.ru/price/
+https://techneu.ru/price-list
+https://techneu.ru/price-list/chastnim-litsam
+https://evakuatorcity.ru/tseny
 
-.dblock - @extend .dblock - для всяких :before/:after элементов
-.align-center-parent - идеальное выравнивание по центру (горизонтально и вертикально), задавать родительскому. элемент что центровать - .align-center
-.justify-child - родительский элемент, блоки внутри будут по всей ширине
+### Price
+https://perevozka-po-moskve.ru/evakuatori/
+https://эвакуаторк.рф/
 
+### Services 
+https://www.срочная-техпомощь-москва.рф/
+https://evakuator-v.moscow/
+
+### Revies 
+https://evotax.ru/
+https://evakuator-v.moscow/
+
+### Why We Are 
+https://evacuiifast.ru/
+https://эвакуаторк.рф/
+https://evakuator-v.moscow/
+
+### FAQ 
+https://onevacuater.ru/evacuate.php
+
+### SEO 
+https://evacuiifast.ru/
+http://autoevacuator.com.ua/chto-nuzhno-znat-esli-vam-ponadobitsya-evakuatsiya-avto
+https://evakuatorcity.ru/evakuatory/kak-bystro-priezzhaet-nash-evakuator.html
+https://avtosos24.com/gruzoperevozki-evakuatorom-osobennosti-i-preimushhestva/
+https://avtosos24.com/category/usefull-to-know/
+https://evakuator-v.moscow/
 
 ## TODO
 ### Projects for investigae
@@ -22,8 +49,7 @@ https://express-t.ua/uk/poslugi/evakuatory
 https://www.express-evakuator.com.ua/
 https://towtruck.com.ua/
 https://эвакуаторк.рф/calculate/
-https://evakuator-v.moscow/
-https://www.evacuator-moskva.ru/
+https://www.помощь-на-дорогах.рф
 hero https://evak.moscow/
 price https://techneu.ru/
 price https://эвакуаторк.рф/
@@ -47,28 +73,3 @@ https://www.cssportal.com/css-optimize/
 https://css2sass.herokuapp.com/
 https://minimalcss.app/
 
-### Gradients
-  * @include linear-gradient(yellow, blue);
-  * @include linear-gradient(to top, red 0%, green 50%, orange 100%);
-  * @include linear-gradient(45deg, orange 0%, pink 50%, green 50.01%, green 50.01%, violet 100%);
-
-### px 2 rm
-https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_px-to-em.scss
-// Convert pixels to ems
-// eg. for a relational value of 12px write em(12) when the parent is 16px
-// if the parent is another value say 24px write em(12, 24)
-
-
-### Triangle generator
- * https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_triangle.scss
- * @include triangle(12px, gray, down);
- * @include triangle(12px 6px, gray lavender, up-left);
- * The $size argument can take one or two values—width height.
- * The $color argument can take one or two values—foreground-color background-color.
- * $direction: up, down, left, right, up-right, up-left, down-right, down-left
-
-
-### Fonts
- * @font-face mixin
- * Bulletproof font-face via Font Squirrel
- * @include fontface('family', 'assets/fonts/', 'myfontname');
